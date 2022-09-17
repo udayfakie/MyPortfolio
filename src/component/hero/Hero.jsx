@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import Global from "../../global.jpg"
 
@@ -43,7 +44,8 @@ width:500px;
 const ButtonsContainer = styled.div`
 display: flex;
 `
-const Button = styled.button`
+const Button = styled(NavLink)`
+text-decoration: none;
 margin-left: 5px;
 font-weight: bold;
 color: white;
@@ -76,10 +78,10 @@ return (
     Experienced with: JavaScript, React.js, Node.js, MongoDB, HTML, CSS,APIs,
     </Decription>
     <ButtonsContainer>
-        <Button> View Project</Button>
-        <Button>CV</Button>
+        <Button to="/project"> View Project</Button>
+        <Button to="/resume">CV</Button>
     </ButtonsContainer>
-</Left>{""}
+</Left>
 <Right>
     <Image src={Global} alt="img"/>
 </Right>

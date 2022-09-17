@@ -2,7 +2,12 @@ import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components';
 import Hero from './component/hero/Hero';
 import Navbar from './component/navbar/Navbar';
-// import { ThemeProvider } from 'styled-components';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Home from './component/pages/Home';
+import About from './component/pages/About';
+import Project from './component/pages/Project';
+import Resume from './component/pages/Resume';
+import Contact from './component/pages/Contact';
 
 const GlobalStyles = createGlobalStyle`
 body{
@@ -26,13 +31,23 @@ height: 100vh;
 function App() {
   return (
   <>
- 
   <GlobalStyles/>
+  <Router basename="/">
+
   <Container> 
   <Navbar/>
   <Hero/>
   </Container>
-  
+<Routes>
+  <Route  path='/' element={<Home/>}/>
+  <Route  path='/about' element={<About/>}/>
+  <Route  path='/project' element={<Project/>}/>
+  <Route  path='/resume' element={<Resume/>}/>
+  <Route  path='/contact' element={<Contact/>}/>
+</Routes>
+  </Router>
+
+
   </>
 );
 }

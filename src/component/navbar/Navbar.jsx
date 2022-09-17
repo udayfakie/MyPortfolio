@@ -1,5 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import { NavLink} from 'react-router-dom';
+import styled from 'styled-components';
+// import { useRef } from 'react';
 
 
 
@@ -28,18 +30,20 @@ const Center= styled.div`
 display: flex;
 flex: 2;
 `
-const Logo = styled.h1`
+const Logo = styled(NavLink)`
+text-decoration: none;
+font-weight: 900;
 font-size: 20px;
-text-decoration: underline;
 color: darkblue;
 cursor: pointer;
 `
-
 const Menu = styled.ul`
 display: flex;
 list-style: none;
+
 `
-const MenuItem = styled.li`
+const NavbarLinks = styled(NavLink)`
+text-decoration: none;
 font-size: 20px;
 font-weight: bold;
 margin-right: 30px;
@@ -49,7 +53,8 @@ cursor: pointer;
     color: darkblue;
 }
 `
-const Button = styled.button`
+const ContactlinkButton = styled(NavLink)`
+text-decoration: none;
 font-weight: bold;
 background-color: darkblue;
 cursor: pointer;
@@ -64,27 +69,30 @@ border-radius: 10px;
 }
 `
 
+const  Navbar = () =>{
 
-
-
-const Navbar = () => {
   return (
     <Container>
+
       <Left>
-      <Logo>uday</Logo>
+      <Logo to="/">Uday</Logo>
       </Left>
+
       <Center>
       <Menu>
-        <MenuItem>Home</MenuItem>
-        <MenuItem>About</MenuItem>
-        <MenuItem>Service</MenuItem>
+        <NavbarLinks to="/">Home</NavbarLinks>
+        <NavbarLinks to="/About">About</NavbarLinks>
+        <NavbarLinks to="/project">Project</NavbarLinks>
       </Menu>
       </Center>
+
       <Right>
-        <Button>Contact</Button>
+      <ContactlinkButton to="/Contact">Contact</ContactlinkButton>
       </Right>
+
     </Container>
   )
 }
+
 
 export default Navbar
