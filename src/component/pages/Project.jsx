@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ProjectBanner from "../ProjectBanner/ProjectBanner";
 import MJICALPLANET from "../../majical-planet-img.png"
+import UDAYfAKIE from "../../uday-fakie-portfolio.png"
 import {
   Button,
   Card,
@@ -9,22 +10,35 @@ import {
   CardTitle,
   Description,
 } from "../styles/Style.Card";
+import { MajicalPlanet } from "../styles/Style.Card";
+import { ReactPortfolio } from "../styles/Style.Card";
 
 
 
 const Project = () => {
   return (
     <>
-      <ProjectBanner title={"Title"} subtitle={"subtitle"} />
+      <ProjectBanner title={""} subtitle={"Projects"} />
       <Container>
         <Card>
           <CardContent>
-            <CardTitle>Majical Planet</CardTitle>
+            <CardTitle>{MajicalPlanet}</CardTitle>
             <Description>
             <Img src={MJICALPLANET} alt="MJICALPLANET"/> 
             </Description>
             <Button>
               <A href="https://majical-planet.netlify.app/">Take A Look</A>
+            </Button>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent>
+            <CardTitle>{ReactPortfolio}</CardTitle>
+            <Description>
+            <Img src={UDAYfAKIE} alt="MJICALPLANET"/> 
+            </Description>
+            <Button>
+              <A href="https://uday-fakie-portfolio.netlify.app/">Take A Look</A>
             </Button>
           </CardContent>
         </Card>
@@ -43,6 +57,8 @@ flex-wrap: wrap;
 `
 const Img = styled.img`
 width: 350px;
+border-radius: 10px;
+
 `
 const A = styled.a`
   text-decoration: none;

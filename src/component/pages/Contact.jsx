@@ -4,16 +4,11 @@ import styled from "styled-components";
 const Contact = () => {
   return (
     <Container>
-      <Form action="">
-        <Input type="text" name="name" placeholder="Your Full Name" required />
-        <Input type="email" name="email" placeholder="Your Email" required />
-        <Textarea
-          name="message"
-          rows="7"
-          placeholder="Your Message"
-          required
-        ></Textarea>
-        <ContactButton type="submit"> Send Message</ContactButton>
+      <Form>
+        <Input type="text" placeholder="Name" name="name"/>
+        <Input type="email" placeholder="Email" name="email"/>
+        <Texteara name="message" rows="7" placeholder="Message"></Texteara>
+        <Button>Submit </Button>
       </Form>
     </Container>
   );
@@ -21,51 +16,67 @@ const Contact = () => {
 
 export default Contact;
 
+const Form = styled.form`
+text-align: center;
+`
 
 const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 38% 58%;
-  gap: 12%;
-  padding: 1.2rem;
-`;
-const ContactButton = styled.button`
-  text-decoration: none;
-  font-weight: bold;
-  background-color: darkblue;
-  cursor: pointer;
-  border: 2px solid white;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 10px;
-
-  &:hover {
-    background-color: aliceblue;
-    color: darkblue;
-    border: 2px solid darkblue;
-  }
-`;
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 2.2rem;
-  /* margin-left: 50%; */
+  padding-top: 60px;
   justify-content: center;
-`;
-const Input = styled.input`
-  width: 100%;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  background: transparent;
-  border: 2px solid darkblue;
+  display: grid;
 `;
 
-const Textarea = styled.textarea`
-  width: 100%;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  background: transparent;
+const Input = styled.input`
+display: block;
+width: 450px;
+padding: 0 20px;
+border:  2px solid rgba(0,0,0, .1);
+border-radius: 15px;
+height: 50px;
+line-height: 46px;
+margin: 20px 0px;
+outline: none;
+color: #fff;
+font-size: 15px;
+letter-spacing: .1px;
+background-color: darkblue;
+border: 2px solid hsla(0, 0%, 100%, .2);
+`
+const Texteara = styled.textarea`
+display: block;
+width: 450px;
+padding: 0 20px;
+border:  2px solid rgba(0,0,0, .1);
+border-radius: 15px;
+height: 150px;
+line-height: 46px;
+margin: 20px 0px;
+outline: none;
+color: #fff;
+font-size: 15px;
+letter-spacing: .1px;
+background-color: darkblue;
+border: 2px solid hsla(0, 0%, 100%, .2);
+`
+const Button = styled.button`
+  text-decoration: none;
+  /* margin-left: 40%; */
+ 
+  font-weight: bold;
+  color: white;
+  background-color: darkblue;
+  padding: 10px 30px;
+  cursor: pointer;
   border: 2px solid darkblue;
+  border-radius: 10px;
+  background: linear-gradient(to right, aliceblue 50%, darkblue 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-in-out;
+  :hover {
+    color: darkblue;
+    border: 2px solid blue;
+    background-position: left bottom;
+    cursor: pointer;
+  }
 `;

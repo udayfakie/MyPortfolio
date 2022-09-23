@@ -1,7 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import Global from "../../global.jpg";
+// import Global from "../../global.jpg";
+import { BsLinkedin} from 'react-icons/bs';
+import { AiFillGithub} from 'react-icons/ai';
+import { SiGmail} from 'react-icons/si';
 
 const Home = () => {
   return (
@@ -9,7 +12,7 @@ const Home = () => {
       <Left>
         <Title>Frontend Developer</Title>
         <Decription>
-        
+        Hi I'm Uday Frontend Developer 
         </Decription>
         <ButtonsContainer>
           <Button to="/project"> View Project</Button>
@@ -17,7 +20,9 @@ const Home = () => {
         </ButtonsContainer>
       </Left>
       <Right>
-        <Image src={Global} alt="img" />
+        <BsLinkedin></BsLinkedin>
+        <AiFillGithub></AiFillGithub>
+        <SiGmail></SiGmail>
       </Right>
     </Container>
   );
@@ -36,6 +41,7 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 120px;
 `;
 
 const Title = styled.div`
@@ -50,6 +56,8 @@ const Decription = styled.p`
   width: 70%;
   font-size: 20px;
   color: gray;
+  text-align: center;
+  padding: 10px;
 `;
 const Right = styled.div`
   display: flex;
@@ -58,9 +66,9 @@ const Right = styled.div`
   background-color: white;
 `;
 
-const Image = styled.img`
-  width: 500px;
-`;
+// const Image = styled.img`
+//   width: 500px;
+// `;
 
 const ButtonsContainer = styled.div`
   display: flex;

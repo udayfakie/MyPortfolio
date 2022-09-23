@@ -13,8 +13,9 @@ const Navbar = () => {
       <Center>
         <Menu>
           <NavbarLinks to="/">Home</NavbarLinks>
-          <NavbarLinks to="/about">About me</NavbarLinks>
+          <NavbarLinks to="/about">About</NavbarLinks>
           <NavbarLinks to="/project">Project</NavbarLinks>
+          <NavbarLinks to="/contact">Contact</NavbarLinks>
         </Menu>
       </Center>
 
@@ -61,6 +62,8 @@ const Logo = styled(NavLink)`
 const Menu = styled.ul`
   display: flex;
   list-style: none;
+  margin-left: 200px;
+  
 `;
 const NavbarLinks = styled(NavLink)`
   text-decoration: none;
@@ -70,7 +73,9 @@ const NavbarLinks = styled(NavLink)`
   color: gray;
   cursor: pointer;
   &:hover {
-    color: darkblue;
+   color: darkblue;
+  transition: 0.3s;
+  
   }
 `;
 const ContactlinkButton = styled(NavLink)`
