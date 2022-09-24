@@ -15,7 +15,6 @@ const Navbar = () => {
           <NavbarLinks to="/">Home</NavbarLinks>
           <NavbarLinks to="/about">About</NavbarLinks>
           <NavbarLinks to="/project">Project</NavbarLinks>
-          <NavbarLinks to="/contact">Contact</NavbarLinks>
         </Menu>
       </Center>
 

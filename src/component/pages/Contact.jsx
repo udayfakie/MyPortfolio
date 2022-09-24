@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Contact = () => {
   return (
     <Container>
+    <H1>Contact Us</H1>
       <Form>
         <Input type="text" placeholder="Name" name="name"/>
         <Input type="email" placeholder="Email" name="email"/>
@@ -24,6 +25,14 @@ const Container = styled.div`
   padding-top: 60px;
   justify-content: center;
   display: grid;
+`;
+const H1 = styled.h1`
+  font-weight: bold;
+  font-size: 35px;
+  color: darkblue;
+  /* text-align: center; */
+  
+  
 `;
 
 const Input = styled.input`

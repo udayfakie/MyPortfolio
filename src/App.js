@@ -20,10 +20,6 @@ background-color:"white";
 `;
 // ToDo
 
-const Container = styled.div`
-  background-color: #fff;
-  /* height: 100vh; */
-`;
 
 
 const App = () => {
@@ -33,7 +29,7 @@ const App = () => {
       <Router basename="/">
         <Container>
           <Navbar />
-          {/* <Hero/> */}
+          
         </Container>
         <Routes>
           <Route path="/" element={<Home/>} />
@@ -48,3 +44,7 @@ const App = () => {
 };
 
 export default App;
+const Container = styled.div`
+  background-color: #fff;
+  /* height: 100vh; */
+`;

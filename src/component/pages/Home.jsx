@@ -2,27 +2,33 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 // import Global from "../../global.jpg";
-import { BsLinkedin} from 'react-icons/bs';
-import { AiFillGithub} from 'react-icons/ai';
-import { SiGmail} from 'react-icons/si';
+import { BsLinkedin } from "react-icons/bs";
+import { AiFillGithub } from "react-icons/ai";
+import { SiGmail } from "react-icons/si";
 
 const Home = () => {
   return (
     <Container>
       <Left>
         <Title>Frontend Developer</Title>
-        <Decription>
-        Hi I'm Uday Frontend Developer 
-        </Decription>
+        <Decription>Hi I'm Uday Frontend Developer</Decription>
         <ButtonsContainer>
           <Button to="/project"> View Project</Button>
           <Button to="/resume">CV</Button>
         </ButtonsContainer>
       </Left>
       <Right>
-        <BsLinkedin></BsLinkedin>
-        <AiFillGithub></AiFillGithub>
-        <SiGmail></SiGmail>
+        <a href="https://www.linkedin.com/in/uday-fakie/">
+          <BsLinkedin style={{ color: "darkblue", fontSize: 45, margin: 10 }} />
+        </a>
+        <a href="https://github.com/udayfakie">
+          <AiFillGithub
+            style={{ color: "darkblue", fontSize: 45, margin: 10 }}
+          />
+        </a>
+        <NavLink to="/contact">
+          <SiGmail style={{ color: "darkblue", fontSize: 45, margin: 10 }} />
+        </NavLink>
       </Right>
     </Container>
   );
@@ -65,10 +71,6 @@ const Right = styled.div`
   width: 40%;
   background-color: white;
 `;
-
-// const Image = styled.img`
-//   width: 500px;
-// `;
 
 const ButtonsContainer = styled.div`
   display: flex;
