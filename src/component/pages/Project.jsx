@@ -38,7 +38,7 @@ const Project = () => {
             <Img src={UDAYfAKIE} alt="MJICALPLANET"/> 
             </Description>
             <Button>
-              <A href="https://uday-fakie-portfolio.netlify.app/">Take A Look</A>
+              <A href="https://udayswork.netlify.app/">Take A Look</A>
             </Button>
           </CardContent>
         </Card>
