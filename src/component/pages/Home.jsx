@@ -10,25 +10,26 @@ const Home = () => {
   return (
     <Container>
       <Left>
-        <Title>Frontend Developer</Title>
-        <Decription>Hi I'm Uday Frontend Developer</Decription>
+        <Title>Hey I'm FullStack Developer </Title>
+        <Decription>
+        specialist in frontend development with basic knowledge
+         in developing great user interface and real life interactions  
+        </Decription>
         <ButtonsContainer>
-          <Button to="/project"> View Project</Button>
+          <Button to="/project">View Project</Button>
           <Button to="/resume">CV</Button>
         </ButtonsContainer>
       </Left>
       <Right>
-        <a href="https://www.linkedin.com/in/uday-fakie/">
-          <BsLinkedin style={{ color: "darkblue", fontSize: 45, margin: 10 }} />
-        </a>
-        <a href="https://github.com/udayfakie">
-          <AiFillGithub
-            style={{ color: "darkblue", fontSize: 45, margin: 10 }}
-          />
-        </a>
-        <NavLink to="/contact">
-          <SiGmail style={{ color: "darkblue", fontSize: 45, margin: 10 }} />
-        </NavLink>
+        <A href="https://www.linkedin.com/in/uday-fakie/">
+          <BsLinkedin />
+        </A>
+        <A href="https://github.com/udayfakie">
+          <AiFillGithub />
+        </A>
+        <MailNavLink to="/contact">
+          <SiGmail />
+        </MailNavLink>
       </Right>
     </Container>
   );
@@ -39,6 +40,28 @@ export default Home;
 const Container = styled.div`
   height: 90%;
   display: flex;
+
+  @media only screen and (max-width: 600px) {
+    height: 60%;
+  }
+  @media only screen and (min-width: 600px) {
+    height: 40%;
+  }
+  @media only screen and (min-width: 992px) {
+    height: 80%;
+  }
+`;
+
+const MailNavLink = styled(NavLink)`
+  font-size: 50px;
+  color: darkblue;
+
+`;
+
+const A = styled.a`
+  padding: 10px;
+  font-size: 50px;
+  color: darkblue;
 `;
 const Left = styled.div`
   width: 60%;
@@ -48,6 +71,16 @@ const Left = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 120px;
+
+  @media only screen and (min-width: 600px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+  @media only screen and (min-width: 992px) {
+    width: 60%;
+  }
 `;
 
 const Title = styled.div`
@@ -56,6 +89,18 @@ const Title = styled.div`
   color: darkblue;
   width: 60%;
   text-align: center;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    font-size: 30px;
+  }
+  @media only screen and (min-width: 600px) {
+    width: 85%;
+    font-size: 30px;
+  }
+  @media only screen and (min-width: 992px) {
+    width: 85%;
+  }
 `;
 
 const Decription = styled.p`
@@ -64,12 +109,31 @@ const Decription = styled.p`
   color: gray;
   text-align: center;
   padding: 10px;
+
+  @media only screen and (max-width: 600px) {
+    width: 80%;
+    text-align: center;
+  }
+  @media only screen and (min-width: 600px) {
+    width: 70%;
+  }
+  @media only screen and (min-width: 992px) {
+    width: 70%;
+  }
 `;
 const Right = styled.div`
   display: flex;
+
   align-items: center;
-  width: 40%;
-  background-color: white;
+  justify-content: center;
+  width: 60%;
+  background-color: #fff;
+
+  @media only screen and (max-width: 600px) {
+    display: block;
+    margin-top: 50px;
+    padding: 10px;
+  }
 `;
 
 const ButtonsContainer = styled.div`
@@ -94,5 +158,15 @@ const Button = styled(NavLink)`
     border: 2px solid blue;
     background-position: left bottom;
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 10px 25px;
+  }
+  @media only screen and (min-width: 600px) {
+    padding: 10px 30px;
+  }
+  @media only screen and (min-width: 992px) {
+    padding: 15px 30px;
   }
 `;

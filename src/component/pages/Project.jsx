@@ -54,6 +54,18 @@ const Container = styled.div`
 display: flex;
 justify-content: center;
 flex-wrap: wrap;
+height: 90%;
+  display: flex;
+
+  @media only screen and (max-width: 600px) {
+    height: 60%;
+  }
+  @media only screen and (min-width: 600px) {
+    height: 40%;
+  }
+  @media only screen and (min-width: 992px) {
+    height: 80%;
+  }
 `
 const Img = styled.img`
 width: 350px;

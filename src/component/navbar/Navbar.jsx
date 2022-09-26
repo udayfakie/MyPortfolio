@@ -28,13 +28,31 @@ const Navbar = () => {
 export default Navbar;
 
 const Container = styled.div`
+  /* position: fixed; */
   width: 100%;
   height: 10%;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  // Mobile
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    height: 8%;
+  }
+  // tablets and medium screens
+  @media only screen and (min-width: 600px) {
+    width: 100%;
+    height: 5%;
+  }
+  //laptops and desktop
+  @media only screen and (min-width: 992px) {
+    width: 100%;
+    height: 10%;
+  }
 `;
+
 const Left = styled.div`
   display: flex;
   justify-content: space-around;
@@ -50,6 +68,16 @@ const Right = styled.div`
 const Center = styled.div`
   display: flex;
   flex: 2;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+  @media only screen and (min-width: 600px) {
+    display: flex;
+  }
+  @media only screen and (min-width: 992px) {
+    display: flex;
+  }
 `;
 const Logo = styled(NavLink)`
   text-decoration: none;
@@ -62,7 +90,6 @@ const Menu = styled.ul`
   display: flex;
   list-style: none;
   margin-left: 200px;
-  
 `;
 const NavbarLinks = styled(NavLink)`
   text-decoration: none;
@@ -72,9 +99,16 @@ const NavbarLinks = styled(NavLink)`
   color: gray;
   cursor: pointer;
   &:hover {
-   color: darkblue;
-  transition: 0.3s;
-  
+    color: darkblue;
+    transition: 0.3s;
+  }
+  @media only screen and (min-width: 600px) {
+    font-size: 15px;
+    margin-right: 15px;
+  }
+  @media only screen and (min-width: 992px) {
+    font-size: 20px;
+    margin-right: 30px;
   }
 `;
 const ContactlinkButton = styled(NavLink)`
@@ -90,5 +124,11 @@ const ContactlinkButton = styled(NavLink)`
     background-color: aliceblue;
     color: darkblue;
     border: 2px solid darkblue;
+  }
+  @media only screen and (min-width: 600px) {
+  padding: 8px 15px;
+  }
+  @media only screen and (min-width: 992px) {
+   padding: 10px 20px;
   }
 `;
