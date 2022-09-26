@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Contact = () => {
+
+  
   return (
     <Container>
     <H1>Contact Us</H1>
@@ -19,12 +21,15 @@ export default Contact;
 
 const Form = styled.form`
 text-align: center;
+
 `
 
 const Container = styled.div`
   padding-top: 60px;
   justify-content: center;
   display: grid;
+
+
 `;
 const H1 = styled.h1`
   font-weight: bold;
@@ -50,6 +55,10 @@ font-size: 15px;
 letter-spacing: .1px;
 background-color: darkblue;
 border: 2px solid hsla(0, 0%, 100%, .2);
+@media only screen and (max-width: 600px) {
+    width: 80%;
+  
+  }
 `
 const Texteara = styled.textarea`
 display: block;
@@ -66,11 +75,13 @@ font-size: 15px;
 letter-spacing: .1px;
 background-color: darkblue;
 border: 2px solid hsla(0, 0%, 100%, .2);
+@media only screen and (max-width: 600px) {
+    width: 80%;
+  /* margin-left: 40px; */
+  }
 `
 const Button = styled.button`
   text-decoration: none;
-  /* margin-left: 40%; */
- 
   font-weight: bold;
   color: white;
   background-color: darkblue;
@@ -87,5 +98,9 @@ const Button = styled.button`
     border: 2px solid blue;
     background-position: left bottom;
     cursor: pointer;
+  }
+  @media only screen and (max-width: 600px) {
+    margin-right: 50px;
+    
   }
 `;

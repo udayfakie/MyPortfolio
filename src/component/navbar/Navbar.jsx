@@ -70,7 +70,10 @@ const Center = styled.div`
   flex: 2;
 
   @media only screen and (max-width: 600px) {
-    display: none;
+    display: flex;
+    position: relative;
+    right: 190px;
+    top: 30px;
   }
   @media only screen and (min-width: 600px) {
     display: flex;
@@ -110,6 +113,7 @@ const NavbarLinks = styled(NavLink)`
     font-size: 20px;
     margin-right: 30px;
   }
+
 `;
 const ContactlinkButton = styled(NavLink)`
   text-decoration: none;
@@ -124,6 +128,12 @@ const ContactlinkButton = styled(NavLink)`
     background-color: aliceblue;
     color: darkblue;
     border: 2px solid darkblue;
+  }
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    position: relative;
+    right: 580px;
+    top: 90px;
   }
   @media only screen and (min-width: 600px) {
   padding: 8px 15px;

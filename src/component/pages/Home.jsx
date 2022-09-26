@@ -5,10 +5,12 @@ import styled from "styled-components";
 import { BsLinkedin } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
+// import Project from "./Project";
 
 const Home = () => {
   return (
     <Container>
+    
       <Left>
         <Title>Hey I'm FullStack Developer </Title>
         <Decription>
@@ -62,6 +64,10 @@ const A = styled.a`
   padding: 10px;
   font-size: 50px;
   color: darkblue;
+  @media only screen and (min-width: 600px) {
+
+    
+  }
 `;
 const Left = styled.div`
   width: 60%;
@@ -74,6 +80,7 @@ const Left = styled.div`
 
   @media only screen and (min-width: 600px) {
     width: 50%;
+    
   }
   @media only screen and (max-width: 600px) {
     width: 100%;
@@ -131,7 +138,9 @@ const Right = styled.div`
 
   @media only screen and (max-width: 600px) {
     display: block;
-    margin-top: 50px;
+    margin-top: 55px;
+    position: relative;
+    left: 25px;
     padding: 10px;
   }
 `;

@@ -54,6 +54,8 @@ const Title = styled.div`
   @media only screen and (max-width: 600px) {
     width: 100%;
     font-size: 30px;
+    position: relative;
+    top: 20px;
   }
   @media only screen and (min-width: 600px) {
     width: 85%;
@@ -73,6 +75,8 @@ const Description = styled.div`
   @media only screen and (max-width: 600px) {
     width: 80%;
     text-align: center;
+    position: relative;
+    top: 20px;
    
   }
   @media only screen and (min-width: 600px) {
@@ -94,6 +98,7 @@ const LeftContainer = styled.div`
   
   @media only screen and (min-width: 600px) {
     width: 50%;
+ 
   
   }
   @media only screen and (max-width: 600px) {
@@ -109,7 +114,8 @@ const RightContainer = styled.div`
   width: 50%;
   height: 92vh;
   @media only screen and (max-width: 600px) {
-    display: none;
+    /* display: none; */
+    
   }
 `;
 
