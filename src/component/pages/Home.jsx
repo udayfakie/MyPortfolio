@@ -10,16 +10,17 @@ import { SiGmail } from "react-icons/si";
 const Home = () => {
   return (
     <Container>
-    
       <Left>
         <Title>Hey I'm FullStack Developer </Title>
         <Decription>
-        specialist in frontend development with basic knowledge
-         in developing great user interface and real life interactions  
+          specialist in frontend development with basic knowledge in developing
+          great user interface and real life interactions
         </Decription>
         <ButtonsContainer>
           <Button to="/project">View Project</Button>
-          <Button to="/resume">CV</Button>
+          <Resume href="UdayFakieCV.pdf" download=" Uday Fakie UdayFakieCV.pdf">
+            CV
+          </Resume>
         </ButtonsContainer>
       </Left>
       <Right>
@@ -57,7 +58,6 @@ const Container = styled.div`
 const MailNavLink = styled(NavLink)`
   font-size: 50px;
   color: darkblue;
-
 `;
 
 const A = styled.a`
@@ -65,8 +65,6 @@ const A = styled.a`
   font-size: 50px;
   color: darkblue;
   @media only screen and (min-width: 600px) {
-
-    
   }
 `;
 const Left = styled.div`
@@ -80,7 +78,6 @@ const Left = styled.div`
 
   @media only screen and (min-width: 600px) {
     width: 50%;
-    
   }
   @media only screen and (max-width: 600px) {
     width: 100%;
@@ -147,6 +144,38 @@ const Right = styled.div`
 
 const ButtonsContainer = styled.div`
   display: flex;
+`;
+
+const Resume = styled.a`
+  text-decoration: none;
+  margin-left: 5px;
+  font-weight: bold;
+  color: white;
+  background-color: darkblue;
+  padding: 10px 30px;
+  cursor: pointer;
+  border: 2px solid darkblue;
+  border-radius: 10px;
+  background: linear-gradient(to right, aliceblue 50%, darkblue 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-in-out;
+  :hover {
+    color: darkblue;
+    border: 2px solid blue;
+    background-position: left bottom;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 10px 25px;
+  }
+  @media only screen and (min-width: 600px) {
+    padding: 10px 30px;
+  }
+  @media only screen and (min-width: 992px) {
+    padding: 15px 30px;
+  }
 `;
 const Button = styled(NavLink)`
   text-decoration: none;

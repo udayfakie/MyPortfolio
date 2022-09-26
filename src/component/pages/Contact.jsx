@@ -1,13 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+const SendEmails = (e) => {
+  e.preventDefault()
+  emailjs.sendForm('service_yjx2tqc',"template_d9httz8",e.target,"_Q0B1Rl4rY9YU5gJA")
+  e.target.reset()
+  alert("successfully")
 
+} 
   
   return (
     <Container>
     <H1>Contact Us</H1>
-      <Form>
+      <Form onSubmit={SendEmails}>
         <Input type="text" placeholder="Name" name="name"/>
         <Input type="email" placeholder="Email" name="email"/>
         <Texteara name="message" rows="7" placeholder="Message"></Texteara>
@@ -15,6 +22,7 @@ const Contact = () => {
       </Form>
     </Container>
   );
+ 
 };
 
 export default Contact;

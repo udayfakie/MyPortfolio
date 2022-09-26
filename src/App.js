@@ -1,12 +1,10 @@
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
-
 import Navbar from "./component/navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./component/pages/Home";
 import About from "./component/pages/About";
 import Project from "./component/pages/Project";
-import Resume from "./component/pages/Resume";
 import Contact from "./component/pages/Contact";
 
 const GlobalStyles = createGlobalStyle`
@@ -20,22 +18,18 @@ background-color:"white";
 `;
 // ToDo
 
-
-
 const App = () => {
   return (
     <>
-      <GlobalStyles/>
+      <GlobalStyles />
       <Router basename="/">
         <Container>
           <Navbar />
-          
         </Container>
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/project" element={<Project />} />
-          <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
