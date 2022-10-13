@@ -1,36 +1,24 @@
-import styled from "styled-components";
-import { createGlobalStyle } from "styled-components";
+import GlobalStyle from "./styles/GlobalStyles";
 import Navbar from "./component/navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./component/pages/Home";
-import About from "./component/pages/About";
-import Project from "./component/pages/Project";
-import Contact from "./component/pages/Contact";
-
-const GlobalStyles = createGlobalStyle`
-body{
-background-color:"white";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&family=Open+Sans&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300&display=swap');
- *{
-    font-family: 'Roboto', sans-serif;
-  }
-}
-`;
-// ToDo
+import Home from "./component/screens/Home";
+import About from "./component/screens/About";
+import Project from "./component/screens/Project";
+import Contact from "./component/screens/Contact";
+import Skills from "./component/screens/Skills";
 
 const App = () => {
   return (
     <>
-      <GlobalStyles />
+      <GlobalStyle />
       <Router basename="/">
-        <Container>
-          <Navbar />
-        </Container>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/project" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/skills" element={<Skills />} />
         </Routes>
       </Router>
     </>
@@ -38,7 +26,3 @@ const App = () => {
 };
 
 export default App;
-const Container = styled.div`
-  background-color: #fff;
-  /* height: 100vh; */
-`;

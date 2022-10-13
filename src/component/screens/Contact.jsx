@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import emailjs from '@emailjs/browser';
+// import Icons from "../../Icons";
 
 const Contact = () => {
 const SendEmails = (e) => {
@@ -20,6 +21,7 @@ const SendEmails = (e) => {
         <Texteara name="message" rows="7" placeholder="Message"></Texteara>
         <Button>Submit </Button>
       </Form>
+      {/* <Icons /> */}
     </Container>
   );
  
@@ -43,7 +45,7 @@ const H1 = styled.h1`
   font-weight: bold;
   font-size: 35px;
   color: darkblue;
-  /* text-align: center; */
+ 
   
   
 `;

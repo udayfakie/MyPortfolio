@@ -1,7 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
-// import { Link } from "react-scroll";
 
 const Navbar = () => {
   return (
@@ -9,15 +8,16 @@ const Navbar = () => {
       <Left>
         <Logo to="/">UdayFakie</Logo>
       </Left>
-
       <Center>
         <Menu>
-          <NavbarLinks to="/">Home</NavbarLinks>
-          <NavbarLinks to="/about">About</NavbarLinks>
+          <NavbarLinks end to="/">
+            Home
+          </NavbarLinks>
+          <NavbarLinks to="/about">About Us</NavbarLinks>
+          <NavbarLinks to="/skills">Skills</NavbarLinks>
           <NavbarLinks to="/project">Project</NavbarLinks>
         </Menu>
       </Center>
-
       <Right>
         <ContactlinkButton to="/Contact">Let's Talk</ContactlinkButton>
       </Right>
@@ -27,35 +27,29 @@ const Navbar = () => {
 
 export default Navbar;
 
-const Container = styled.div`
-  /* position: fixed; */
+const Container = styled.nav`
   width: 100%;
-  height: 10%;
-  background-color: #fff;
+  height: 80px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  // Mobile
+  .active {
+    color: darkorange;
+  }
   @media only screen and (max-width: 600px) {
     width: 100%;
     height: 8%;
   }
-  // tablets and medium screens
   @media only screen and (min-width: 600px) {
-    width: 100%;
-    height: 5%;
   }
-  //laptops and desktop
+
   @media only screen and (min-width: 992px) {
-    width: 100%;
-    height: 10%;
   }
 `;
-
 const Left = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex: 1;
   align-items: center;
 `;
@@ -68,7 +62,6 @@ const Right = styled.div`
 const Center = styled.div`
   display: flex;
   flex: 2;
-
   @media only screen and (max-width: 600px) {
     display: flex;
     position: relative;
@@ -82,17 +75,20 @@ const Center = styled.div`
     display: flex;
   }
 `;
-const Logo = styled(NavLink)`
+const Logo = styled(Link)`
   text-decoration: none;
   font-weight: 900;
-  font-size: 20px;
-  color: darkblue;
+  font-size: 25px;
+  color: #fff;
   cursor: pointer;
 `;
 const Menu = styled.ul`
   display: flex;
   list-style: none;
   margin-left: 200px;
+  .ative {
+    color: orange;
+  }
 `;
 const NavbarLinks = styled(NavLink)`
   text-decoration: none;
@@ -101,9 +97,8 @@ const NavbarLinks = styled(NavLink)`
   margin-right: 30px;
   color: gray;
   cursor: pointer;
+
   &:hover {
-    color: darkblue;
-    transition: 0.3s;
   }
   @media only screen and (min-width: 600px) {
     font-size: 15px;
@@ -113,32 +108,26 @@ const NavbarLinks = styled(NavLink)`
     font-size: 20px;
     margin-right: 30px;
   }
-
 `;
 const ContactlinkButton = styled(NavLink)`
   text-decoration: none;
   font-weight: bold;
-  background-color: darkblue;
+  background-color: orange;
   cursor: pointer;
-  border: 2px solid white;
-  color: #fff;
+  color: #000;
   padding: 10px 20px;
   border-radius: 10px;
+  transition: all 0.5s ease-in-out;
   &:hover {
     background-color: aliceblue;
-    color: darkblue;
-    border: 2px solid darkblue;
+    color: #000;
+    background-position: left bottom;
   }
-  @media only screen and (max-width: 600px) {
-    display: flex;
-    position: relative;
-    right: 580px;
-    top: 90px;
-  }
+
   @media only screen and (min-width: 600px) {
-  padding: 8px 15px;
+    padding: 8px 15px;
   }
   @media only screen and (min-width: 992px) {
-   padding: 10px 20px;
+    padding: 10px 20px;
   }
 `;
