@@ -2,12 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import MJICALPLANET from "../../assets/majical-planet-img.png";
 import UDAYfAKIE from "../../assets/uday-fakie-portfolio.png";
+import DJ_SCREEN_SHOT from '../../assets/dj_screen_shot.png'
 import {
   DJ_DARGHAM_LINK,
   MajicalPlanet,
   MAJICAL_PLANET_LINK,
 } from "../../constant";
-import { ReactPortfolio } from "../../constant";
+import { UDAY_PORTFPLIO } from "../../constant";
+import { DJ_DRGHAM_SITE } from "../../constant";
 
 const Project = () => {
   return (
@@ -20,18 +22,29 @@ const Project = () => {
               <Img src={MJICALPLANET} alt="PLANET" />
             </Desc>
             <VIEW_PROJECT>
-              <Link href={MAJICAL_PLANET_LINK}>Take A Look</Link>
+              <Link target="_blank" href={MAJICAL_PLANET_LINK}>Take A Look</Link>
             </VIEW_PROJECT>
           </Content>
         </Card>
         <Card>
           <Content>
-            <Title>{ReactPortfolio}</Title>
+            <Title>{UDAY_PORTFPLIO}</Title>
             <Desc>
               <Img src={UDAYfAKIE} alt="Iimg" />
             </Desc>
             <VIEW_PROJECT>
-              <Link href={DJ_DARGHAM_LINK}>Take A Look</Link>
+              <Link target="_blank" href={DJ_DARGHAM_LINK}>Take A Look</Link>
+            </VIEW_PROJECT>
+          </Content>
+        </Card>
+        <Card>
+          <Content>
+            <Title>{DJ_DRGHAM_SITE}</Title>
+            <Desc>
+              <Img src={DJ_SCREEN_SHOT} alt="Iimg" />
+            </Desc>
+            <VIEW_PROJECT>
+              <Link target="_blank" href={DJ_DARGHAM_LINK}>Take A Look</Link>
             </VIEW_PROJECT>
           </Content>
         </Card>

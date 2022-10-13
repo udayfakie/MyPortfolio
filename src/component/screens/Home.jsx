@@ -71,7 +71,6 @@ flex-wrap: wrap;
   width: 300%;
   
   height: 100px;
-  /* background-color: green; */
   font-size: 20px;
   color: gray;
   text-align: center;
