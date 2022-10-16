@@ -1,26 +1,35 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { useState } from "react";
+import Hamburger from "hamburger-react";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+  const HandleClick = () => {
+    setOpen((open) => !open);
+    console.log(open);
+  };
+
   return (
     <Container>
       <Left>
         <Logo to="/">UdayFakie</Logo>
       </Left>
-      <Center>
-        <Menu>
-          <NavbarLinks end to="/">
-            Home
-          </NavbarLinks>
-          <NavbarLinks to="/about">About Us</NavbarLinks>
-          <NavbarLinks to="/skills">Skills</NavbarLinks>
-          <NavbarLinks to="/project">Project</NavbarLinks>
-        </Menu>
-      </Center>
-      <Right>
-        <ContactlinkButton to="/Contact">Let's Talk</ContactlinkButton>
-      </Right>
+      <Menu open={!open}>
+        <NavbarLinks end to="/">
+          Home
+        </NavbarLinks>
+        <NavbarLinks to="/about">About Us</NavbarLinks>
+        <NavbarLinks to="/skills">Skills</NavbarLinks>
+        <NavbarLinks to="/project">Project</NavbarLinks>
+        <NavbarLinks to="/contact">Contact Us</NavbarLinks>
+      </Menu>
+      <StyledBurger open={open} onClick={(HandleClick) => setOpen(!open)}>
+        <div />
+        <div />
+        <div />
+      </StyledBurger>
     </Container>
   );
 };
@@ -29,58 +38,51 @@ export default Navbar;
 
 const Container = styled.nav`
   width: 100%;
-  height: 80px;
-
+  padding: 1.5rem;
+  margin: 0 auto;
   display: flex;
+  max-width: 1280px;
   justify-content: space-between;
   align-items: center;
   .active {
-    color: darkorange;
+    color: #704106;
   }
-  @media only screen and (max-width: 600px) {
-    width: 100%;
-    height: 8%;
+  @media (max-width: 763px) {
+    width: 90%;
   }
-  @media only screen and (min-width: 600px) {
-  }
+`;
 
-  @media only screen and (min-width: 992px) {
-  }
-`;
-const Left = styled.div`
-  display: flex;
-  justify-content: center;
-  flex: 1;
-  align-items: center;
-`;
-const Right = styled.div`
-  display: flex;
-  justify-content: space-around;
-  flex: 1;
-  align-items: center;
-`;
-const Center = styled.div`
-  display: flex;
-  flex: 2;
-  @media only screen and (max-width: 600px) {
-    display: flex;
-    position: relative;
-    right: 190px;
-    top: 30px;
-  }
-  @media only screen and (min-width: 600px) {
-    display: flex;
-  }
-  @media only screen and (min-width: 992px) {
-    display: flex;
-  }
-`;
-const Logo = styled(Link)`
-  text-decoration: none;
-  font-weight: 900;
-  font-size: 25px;
-  color: #fff;
+const StyledBurger = styled.button`
+  width: 1.5rem;
+  height: 1.5rem;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 20;
+  display: none;
+  border: none;
   cursor: pointer;
+  background: transparent;
+  &:focus {
+    outline: none;
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+  }
+  div {
+    width: 1.5rem;
+    height: 0.25rem;
+    background-color: ${({ open }) => (open ? "#030303" : "#030303")};
+    border-radius: 10px;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+    position: relative;
+    &:nth-child(1) {
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+    }
+  }
 `;
 const Menu = styled.ul`
   display: flex;
@@ -89,6 +91,34 @@ const Menu = styled.ul`
   .ative {
     color: orange;
   }
+
+  @media (max-width: 740px) {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    gap: 2rem;
+  }
+`;
+const Left = styled.div`
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
+`;
+
+const Logo = styled(Link)`
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
 `;
 const NavbarLinks = styled(NavLink)`
   text-decoration: none;
@@ -107,27 +137,5 @@ const NavbarLinks = styled(NavLink)`
   @media only screen and (min-width: 992px) {
     font-size: 20px;
     margin-right: 30px;
-  }
-`;
-const ContactlinkButton = styled(NavLink)`
-  text-decoration: none;
-  font-weight: bold;
-  background-color: orange;
-  cursor: pointer;
-  color: #000;
-  padding: 10px 20px;
-  border-radius: 10px;
-  transition: all 0.5s ease-in-out;
-  &:hover {
-    background-color: aliceblue;
-    color: #000;
-    background-position: left bottom;
-  }
-
-  @media only screen and (min-width: 600px) {
-    padding: 8px 15px;
-  }
-  @media only screen and (min-width: 992px) {
-    padding: 10px 20px;
   }
 `;

@@ -1,21 +1,30 @@
 import React from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
+import { AiOutlineWhatsApp } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { GITHUB, LINKEDIN } from "../constant";
+import ReactWhatsapp from "react-whatsapp";
+
 
 const Icons = () => {
   return (
     <Container>
+    
+      <ReactWhatsapp number="+972547084239" message="Hello !!!" />
+      <Chat>
+      <AiOutlineWhatsApp/>
+      </Chat>
+
       <Link target="_blank" href={LINKEDIN}>
         <BsLinkedin />
       </Link>
       <Link target="_blank" href={GITHUB}>
         <AiFillGithub />
       </Link>
-      <MailNavLink  to="/contact">
+      <MailNavLink to="/contact">
         <SiGmail />
       </MailNavLink>
     </Container>
@@ -27,19 +36,24 @@ export default Icons;
 const Container = styled.div`
   display: flex;
   align-items: center;
-
   margin-top: 40px;
 `;
 const MailNavLink = styled(NavLink)`
-  font-size: 60px;
-  color: white;
-
+  font-size: 45px;
+  color: lightslategray;
 `;
 
 const Link = styled.a`
   padding: 10px;
-  font-size: 50px;
-  color: white;
+  font-size: 40px;
+  color: lightslategray;
+
   @media only screen and (min-width: 600px) {
   }
+`;
+
+const Chat = styled.div`
+ padding: 10px;
+  font-size: 40px;
+  color: lightslategray;
 `;
