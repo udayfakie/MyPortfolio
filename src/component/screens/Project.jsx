@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import MJICALPLANET from "../../assets/majical-planet-img.png";
 import UDAYfAKIE from "../../assets/uday-fakie-portfolio.png";
-import DJ_SCREEN_SHOT from '../../assets/dj_screen_shot.png'
+import DJ_SCREEN_SHOT from '../../assets/dj_screen_shot_fit.png'
 import {
   DJ_DARGHAM_LINK,
   MajicalPlanet,
@@ -15,6 +15,17 @@ const Project = () => {
   return (
     <>
       <Container>
+      <Card>
+          <Content>
+            <Title>{DJ_DRGHAM_SITE}</Title>
+            <Desc>
+              <Img src={DJ_SCREEN_SHOT} alt="Iimg" />
+            </Desc>
+            <VIEW_PROJECT>
+              <Link target="_blank" href={DJ_DARGHAM_LINK}>Take A Look</Link>
+            </VIEW_PROJECT>
+          </Content>
+        </Card>
         <Card>
           <Content>
             <Title>{MajicalPlanet}</Title>
@@ -37,17 +48,7 @@ const Project = () => {
             </VIEW_PROJECT>
           </Content>
         </Card>
-        <Card>
-          <Content>
-            <Title>{DJ_DRGHAM_SITE}</Title>
-            <Desc>
-              <Img src={DJ_SCREEN_SHOT} alt="Iimg" />
-            </Desc>
-            <VIEW_PROJECT>
-              <Link target="_blank" href={DJ_DARGHAM_LINK}>Take A Look</Link>
-            </VIEW_PROJECT>
-          </Content>
-        </Card>
+     
       </Container>
     </>
   );
@@ -73,7 +74,8 @@ const Container = styled.div`
   }
 `;
 const Img = styled.img`
-  width: 350px;
+  width: 300px;
+  height: 140px;
   border-radius: 10px;
 `;
 const Link = styled.a`
@@ -86,10 +88,10 @@ const Link = styled.a`
   padding: 10px 20px;
   border-radius: 10px;
   &:hover {
-    background-color: aliceblue;
+    background-color: gray;
   }
 `;
-export const Card = styled.div`
+const Card = styled.div`
   width: 350px;
   margin: 10px 10px;
 transition: all 0.8s ease-in-out;
@@ -98,7 +100,7 @@ transition: all 0.8s ease-in-out;
     background: left, bottom;
   }
 `;
-export const Content = styled.div`
+const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,18 +108,17 @@ export const Content = styled.div`
   flex-direction: column;
 `;
 
-export const Title = styled.h3`
-  color: #fff;
+const Title = styled.h3`
+  color: gray;
   font-weight: 800;
   margin: 15px;
 `;
 
-export const Desc = styled.div`
+const Desc = styled.div`
   color: gray;
   font-size: 15px;
 `;
-export const VIEW_PROJECT = styled.div`
-  color: red;
+const VIEW_PROJECT = styled.div`
   font-weight: bold;
   padding: 30px;
   cursor: pointer;
