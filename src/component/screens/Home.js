@@ -1,20 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
 import styled from "styled-components";
 import Icons from "../Icons";
 
 const Home = () => {
   return (
     <Container>
-      <Title>HEY THERE, I'm FullStack Developer </Title>
+      <Title>
+        HEY THERE<br></br>I'm FullStack Developer{" "}
+      </Title>
       <Decription>
         specialist in frontend development with basic knowledge in developing
         great user interface and real life interactions
       </Decription>
       <ButtonsContainer>
         <Button to="/project">View Project</Button>
-        <Resume href="UdayFakieCV.pdf" download=" Uday Fakie UdayFakieCV.pdf">
+        <Resume href="UdayFakieCV.pdf" download="UdayFakieCV.pdf">
           CV
         </Resume>
       </ButtonsContainer>
@@ -32,18 +33,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 120px;
-  
-
-  @media only screen and (max-width: 600px) {
-    height: 60%;
-  }
-  @media only screen and (min-width: 600px) {
-    height: 40%;
-  }
-  @media only screen and (min-width: 992px) {
-    height: 80%;
-  }
 `;
 
 const Title = styled.div`
@@ -52,41 +41,21 @@ const Title = styled.div`
   color: #fff;
   width: 60%;
   text-align: center;
-
-  @media only screen and (max-width: 600px) {
-    width: 100%;
-    font-size: 30px;
-  }
-  @media only screen and (min-width: 600px) {
-    width: 85%;
-    font-size: 30px;
-  }
-  @media only screen and (min-width: 992px) {
-    width: 85%;
+  transition-duration: all 0.5s;
+  @media (max-width: 740px) {
+    font-size: 22px;
   }
 `;
 
 const Decription = styled.p`
-flex-wrap: wrap;
-  width: 300%;
-  
-  height: 100px;
-  /* background-color: green; */
+  flex-wrap: wrap;
+  width: 30%;
+  height: 450px;
+  height: auto;
   font-size: 20px;
   color: gray;
   text-align: center;
   padding: 10px;
-
-  @media only screen and (max-width: 600px) {
-    width: 80%;
-    text-align: center;
-  }
-  @media only screen and (min-width: 600px) {
-    width: 70%;
-  }
-  @media only screen and (min-width: 992px) {
-    width: 70%;
-  }
 `;
 
 const ButtonsContainer = styled.div`
@@ -108,16 +77,6 @@ const Resume = styled.a`
     background-position: left bottom;
     cursor: pointer;
   }
-
-  @media only screen and (max-width: 600px) {
-    padding: 10px 25px;
-  }
-  @media only screen and (min-width: 600px) {
-    padding: 10px 30px;
-  }
-  @media only screen and (min-width: 992px) {
-    padding: 15px 30px;
-  }
 `;
 const Button = styled(NavLink)`
   text-decoration: none;
@@ -134,15 +93,5 @@ const Button = styled(NavLink)`
   :hover {
     background-position: left bottom;
     cursor: pointer;
-  }
-
-  @media only screen and (max-width: 600px) {
-    padding: 10px 25px;
-  }
-  @media only screen and (min-width: 600px) {
-    padding: 10px 30px;
-  }
-  @media only screen and (min-width: 992px) {
-    padding: 15px 30px;
   }
 `;

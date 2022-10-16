@@ -2,7 +2,8 @@ export const LINKEDIN = "https://www.linkedin.com/in/uday-fakie/";
 export const GITHUB = "https://github.com/udayfakie";
 
 export const MajicalPlanet = "Majical Planet";
-export const ReactPortfolio = "React Portfolio";
+export const UDAY_PORTFPLIO = "Portfolio";
+export const DJ_DRGHAM_SITE = "DJ Dargham Website";
 
 // please keep a standard naming convention :
 // for constants - capital case and underscore only

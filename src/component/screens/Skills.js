@@ -12,14 +12,20 @@ import PYTHON from "../../assets/python.png";
 const Skills = () => {
   return (
     <Container>
-      <IMAGE src={HTML} alt="" />
-      <IMAGE src={CSS} alt="" />
-      <IMAGE src={NODEJS} alt="" />
-      <IMAGE src={MONGODB} alt="" />
-      <IMAGE src={REACT} alt="" />
-      <IMAGE src={JAVASCRIPT} alt="" />
-      <IMAGE src={GITHUB} alt="" />
-      <IMAGE src={PYTHON} alt="" />
+      <Category>
+        <IMAGE src={HTML} alt="" />
+        <IMAGE src={CSS} alt="" />
+        <IMAGE src={REACT} alt="" />
+        <IMAGE src={JAVASCRIPT} alt="" />
+      </Category>
+      <Category>
+        <IMAGE src={NODEJS} alt="" />
+        <IMAGE src={PYTHON} alt="" />
+        <IMAGE src={MONGODB} alt="" />
+      </Category>
+      <Category>
+        <IMAGE src={GITHUB} alt="" />
+      </Category>
     </Container>
   );
 };
@@ -36,6 +42,10 @@ const Container = styled.div`
 const IMAGE = styled.img`
   width: 100px;
   height: 100px;
-  margin-right: 5px;
-  margin-left: 5px;
+  margin: 10px;
+`;
+const Category = styled.div`
+  display: flex;
+  margin: 50px;
+  flex-direction: column;
 `;

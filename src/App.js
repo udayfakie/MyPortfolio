@@ -7,8 +7,10 @@ import Project from "./component/screens/Project";
 import Contact from "./component/screens/Contact";
 import Skills from "./component/screens/Skills";
 
+
 const App = () => {
   return (
+   
     <>
       <GlobalStyle />
       <Router basename="/">
@@ -22,6 +24,7 @@ const App = () => {
         </Routes>
       </Router>
     </>
+    
   );
 };
 
