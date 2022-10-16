@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Uday from '../../assets/Uday.JPG'
+import Uday from "../../assets/Uday.JPG";
 import { Text } from "../../constant";
 
 const About = () => {
@@ -9,11 +9,11 @@ const About = () => {
       <SubContainer>
         <Image src={Uday} alt="img" />
         <TextContainer>
-          <Title>About Us</Title>
-          <SubTitle>I'm A FullStack <StyledSpan>Web Developer</StyledSpan></SubTitle>
-          <AboutMe>
-        {Text}
-          </AboutMe>
+          <Title>About Me</Title>
+          <SubTitle>
+            I'm A FullStack <StyledSpan>Web Developer</StyledSpan>
+          </SubTitle>
+          <AboutMe>{Text}</AboutMe>
         </TextContainer>
       </SubContainer>
     </Container>
@@ -24,8 +24,7 @@ export default About;
 
 const Container = styled.section`
   width: 100%;
- padding: 78px 0px ;
-
+  padding: 78px 0px;
 `;
 const Title = styled.h1`
   color: #fff;
@@ -34,13 +33,13 @@ const Title = styled.h1`
   margin-bottom: 20px;
 `;
 const SubTitle = styled.h2`
-color: green;
-font-size: 25px;
-text-transform: capitalize;
-margin-bottom: 25px;
-letter-spacing: 2px;
+  color: forestgreen;
+  font-size: 25px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
 `;
-const AboutMe = styled.div`
+const AboutMe = styled.p`
   color: #fff;
   letter-spacing: 1px;
   line-height: 28px;
@@ -61,12 +60,11 @@ const SubContainer = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-around;
- 
 `;
 
 const TextContainer = styled.div`
-width: 550px;
-`
+  width: 550px;
+`;
 const StyledSpan = styled.span`
-color: #676668;
-`
+  color: #676668;
+`;
