@@ -1,22 +1,14 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { useState } from "react";
-import Hamburger from "hamburger-react";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  const HandleClick = () => {
-    setOpen((open) => !open);
-    console.log(open);
-  };
-
   return (
     <Container>
       <Left>
         <Logo to="/">UdayFakie</Logo>
       </Left>
-      <Menu open={!open}>
+      <Menu>
         <NavbarLinks end to="/">
           Home
         </NavbarLinks>
@@ -25,7 +17,7 @@ const Navbar = () => {
         <NavbarLinks to="/project">Project</NavbarLinks>
         <NavbarLinks to="/contact">Contact Us</NavbarLinks>
       </Menu>
-      <StyledBurger open={open} onClick={(HandleClick) => setOpen(!open)}>
+      <StyledBurger>
         <div />
         <div />
         <div />
