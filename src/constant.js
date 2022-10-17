@@ -1,7 +1,7 @@
 export const LINKEDIN = "https://www.linkedin.com/in/uday-fakie/";
 export const GITHUB = "https://github.com/udayfakie";
 
-export const MagicalPlanet = "Magical Planet";
+export const MajicalPlanet = "Majical Planet";
 export const UDAY_PORTFPLIO = "Portfolio";
 export const DJ_DRGHAM_SITE = "DJ Dargham Website";
 

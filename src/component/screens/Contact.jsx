@@ -17,18 +17,21 @@ const Contact = () => {
 
   return (
     <Container>
-      <Title>Contact Us</Title>
-      <Form onSubmit={SendEmails}>
-        <Input type="text" placeholder="Name" name="name" required />
-        <Input type="email" placeholder="Email" name="email" required />
-        <Texteara
-          name="message"
-          rows="7"
-          placeholder="Message"
-          required
-        ></Texteara>
-        <Submit>Submit </Submit>
-      </Form>
+      <Left></Left>
+      <Right>
+        <Title>Contact Us</Title>
+        <Form onSubmit={SendEmails}>
+          <Input type="text" placeholder="Name" name="name" required />
+          <Input type="email" placeholder="Email" name="email" required />
+          <Texteara
+            name="message"
+            rows="7"
+            placeholder="Message"
+            required
+          ></Texteara>
+          <Submit>Submit </Submit>
+        </Form>
+      </Right>
     </Container>
   );
 };
@@ -38,11 +41,20 @@ export default Contact;
 const Container = styled.div`
   display: flex;
   padding-top: 60px;
-  align-items: center;
-  flex-direction: column;
   justify-content: center;
 `;
-
+const Right = styled.div`
+  flex: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+const Left = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  flex: 30%;
+`;
 const Form = styled.form`
   text-align: center;
 `;

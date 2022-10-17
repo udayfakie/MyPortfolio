@@ -1,45 +1,54 @@
 import React from "react";
 import styled from "styled-components";
 import MJICALPLANET from "../../assets/majical-planet-img.png";
-import DJ_SCREEN_SHOT from "../../assets/dj_screen_shot_fit.png";
+import UDAYfAKIE from "../../assets/uday-fakie-portfolio.png";
+import DJ_SCREEN_SHOT from '../../assets/dj_screen_shot_fit.png'
 import {
   DJ_DARGHAM_LINK,
-  MagicalPlanet,
+  MajicalPlanet,
   MAJICAL_PLANET_LINK,
 } from "../../constant";
-
+import { UDAY_PORTFPLIO } from "../../constant";
 import { DJ_DRGHAM_SITE } from "../../constant";
 
 const Project = () => {
   return (
     <>
       <Container>
-        <Card>
+      <Card>
           <Content>
             <Title>{DJ_DRGHAM_SITE}</Title>
             <Desc>
               <Img src={DJ_SCREEN_SHOT} alt="Iimg" />
             </Desc>
             <VIEW_PROJECT>
-              <Link target="_blank" href={DJ_DARGHAM_LINK}>
-                Take A Look
-              </Link>
+              <Link target="_blank" href={DJ_DARGHAM_LINK}>Take A Look</Link>
             </VIEW_PROJECT>
           </Content>
         </Card>
         <Card>
           <Content>
-            <Title>{MagicalPlanet}</Title>
+            <Title>{MajicalPlanet}</Title>
             <Desc>
               <Img src={MJICALPLANET} alt="PLANET" />
             </Desc>
             <VIEW_PROJECT>
-              <Link target="_blank" href={MAJICAL_PLANET_LINK}>
-                Take A Look
-              </Link>
+              <Link target="_blank" href={MAJICAL_PLANET_LINK}>Take A Look</Link>
             </VIEW_PROJECT>
           </Content>
         </Card>
+        <Card>
+          <Content>
+            <Title>{UDAY_PORTFPLIO}</Title>
+            <Desc>
+              <Img src={UDAYfAKIE} alt="Iimg" />
+            </Desc>
+            <VIEW_PROJECT>
+              <Link target="_blank" href={DJ_DARGHAM_LINK}>Take A Look</Link>
+            </VIEW_PROJECT>
+          </Content>
+        </Card>
+     
       </Container>
     </>
   );
@@ -85,7 +94,7 @@ const Link = styled.a`
 const Card = styled.div`
   width: 350px;
   margin: 10px 10px;
-  transition: all 0.8s ease-in-out;
+transition: all 0.8s ease-in-out;
   &:hover {
     padding: 8px;
     background: left, bottom;
