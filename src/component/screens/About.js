@@ -10,7 +10,7 @@ const About = () => {
         <Image src={Uday} alt="img" />
         <TextContainer>
           <Title>About Us</Title>
-          <SubTitle>I'm A FullStack <StyledSpan>Web Developer</StyledSpan></SubTitle>
+          <SubTitle>I'm A FullStack Web Developer</SubTitle>
           <AboutMe>
         {Text}
           </AboutMe>
@@ -34,7 +34,7 @@ const Title = styled.h1`
   margin-bottom: 20px;
 `;
 const SubTitle = styled.h2`
-color: green;
+color: gray;
 font-size: 25px;
 text-transform: capitalize;
 margin-bottom: 25px;
