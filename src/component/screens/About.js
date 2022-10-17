@@ -1,32 +1,29 @@
 import React from "react";
 import styled from "styled-components";
-import Uday from '../../assets/Uday.JPG'
+
 import { Text } from "../../constant";
 
 const About = () => {
   return (
     <Container>
-      <SubContainer>
-        <Image src={Uday} alt="img" />
-        <TextContainer>
-          <Title>About Us</Title>
-          <SubTitle>I'm A FullStack <StyledSpan>Web Developer</StyledSpan></SubTitle>
-          <AboutMe>
-        {Text}
-          </AboutMe>
-        </TextContainer>
-      </SubContainer>
+      <Title>About Me</Title>
+      <SubTitle>I'm A FullStack Web Developer</SubTitle>
+      <AboutMe>{Text}</AboutMe>
     </Container>
   );
 };
 
 export default About;
 
-const Container = styled.section`
-  width: 100%;
- padding: 78px 0px ;
+  const Container = styled.div`
+    width: 100%;
+    padding: 78px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  `;
 
-`;
 const Title = styled.h1`
   color: #fff;
   font-size: 80px;
@@ -34,39 +31,18 @@ const Title = styled.h1`
   margin-bottom: 20px;
 `;
 const SubTitle = styled.h2`
-color: green;
-font-size: 25px;
-text-transform: capitalize;
-margin-bottom: 25px;
-letter-spacing: 2px;
+  color: gray;
+  font-size: 25px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
 `;
 const AboutMe = styled.div`
   color: #fff;
+  width: 550px;
   letter-spacing: 1px;
   line-height: 28px;
   font-size: 18px;
   margin-bottom: 45px;
 `;
 
-const Image = styled.img`
-  width: 420px;
-  height: auto;
-  border-radius: 25px;
-`;
-
-const SubContainer = styled.div`
-  width: 1130;
-  max-width: 95%;
-  margin: 0 auto;
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
- 
-`;
-
-const TextContainer = styled.div`
-width: 550px;
-`
-const StyledSpan = styled.span`
-color: #676668;
-`

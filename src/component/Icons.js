@@ -1,22 +1,22 @@
 import React from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
-import { AiOutlineWhatsApp } from "react-icons/ai";
+// import { AiOutlineWhatsApp } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { GITHUB, LINKEDIN } from "../constant";
-import ReactWhatsapp from "react-whatsapp";
+// import ReactWhatsapp from "react-whatsapp";
 
 
 const Icons = () => {
   return (
     <Container>
     
-      <ReactWhatsapp number="+972547084239" message="Hello !!!" />
-      <Chat>
+      {/* <ChatReactWhatsapp number="+972547084239" message="Hello !!!" /> */}
+      {/* <Chat>
       <AiOutlineWhatsApp/>
-      </Chat>
+      </Chat> */}
 
       <Link target="_blank" href={LINKEDIN}>
         <BsLinkedin />
@@ -47,13 +47,11 @@ const Link = styled.a`
   padding: 10px;
   font-size: 40px;
   color: lightslategray;
-
-  @media only screen and (min-width: 600px) {
-  }
 `;
 
-const Chat = styled.div`
- padding: 10px;
-  font-size: 40px;
-  color: lightslategray;
-`;
+// const ChatReactWhatsapp = styled(ReactWhatsapp)`
+//  padding: 10px;
+//   font-size: 40px;
+//   color: lightslategray;
+//   background-image: url("../assets/whatsapp.png");
+// `;

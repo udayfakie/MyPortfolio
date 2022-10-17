@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <Container>
       <Title>
-        HEY THERE<br></br>I'm FullStack Developer{" "}
+        HEY THERE<br></br>I'm a FullStack Developer
       </Title>
       <Decription>
         specialist in frontend development with basic knowledge in developing

@@ -12,16 +12,16 @@ const Navbar = () => {
         <NavbarLinks end to="/">
           Home
         </NavbarLinks>
-        <NavbarLinks to="/about">About Us</NavbarLinks>
+        <NavbarLinks to="/about">About Me</NavbarLinks>
         <NavbarLinks to="/skills">Skills</NavbarLinks>
         <NavbarLinks to="/project">Project</NavbarLinks>
         <NavbarLinks to="/contact">Contact Us</NavbarLinks>
       </Menu>
-      <StyledBurger>
+      {/* <StyledBurger>
         <div />
         <div />
         <div />
-      </StyledBurger>
+      </StyledBurger> */}
     </Container>
   );
 };
@@ -44,38 +44,38 @@ const Container = styled.nav`
   }
 `;
 
-const StyledBurger = styled.button`
-  width: 1.5rem;
-  height: 1.5rem;
-  position: fixed;
-  top: 15px;
-  right: 20px;
-  z-index: 20;
-  display: none;
-  border: none;
-  cursor: pointer;
-  background: transparent;
-  &:focus {
-    outline: none;
-  }
-  @media (max-width: 768px) {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: column nowrap;
-  }
-  div {
-    width: 1.5rem;
-    height: 0.25rem;
-    background-color: ${({ open }) => (open ? "#030303" : "#030303")};
-    border-radius: 10px;
-    transform-origin: 1px;
-    transition: all 0.3s linear;
-    position: relative;
-    &:nth-child(1) {
-      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
-    }
-  }
-`;
+// const StyledBurger = styled.button`
+//   width: 1.5rem;
+//   height: 1.5rem;
+//   position: fixed;
+//   top: 15px;
+//   right: 20px;
+//   z-index: 20;
+//   display: none;
+//   border: none;
+//   cursor: pointer;
+//   background: transparent;
+//   &:focus {
+//     outline: none;
+//   }
+//   @media (max-width: 768px) {
+//     display: flex;
+//     justify-content: space-around;
+//     flex-flow: column nowrap;
+//   }
+//   div {
+//     width: 1.5rem;
+//     height: 0.25rem;
+//     background-color: ${({ open }) => (open ? "#030303" : "#030303")};
+//     border-radius: 10px;
+//     transform-origin: 1px;
+//     transition: all 0.3s linear;
+//     position: relative;
+//     &:nth-child(1) {
+//       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+//     }
+//   }
+// `;
 const Menu = styled.ul`
   display: flex;
   list-style: none;
@@ -84,7 +84,7 @@ const Menu = styled.ul`
     color: orange;
   }
 
-  @media (max-width: 740px) {
+  /* @media (max-width: 740px) {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -96,7 +96,7 @@ const Menu = styled.ul`
     justify-content: center;
     font-size: 2rem;
     gap: 2rem;
-  }
+  } */
 `;
 const Left = styled.div`
   display: flex;

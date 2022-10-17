@@ -45,6 +45,7 @@ const Container = styled.div`
 
 const Form = styled.form`
   text-align: center;
+
 `;
 
 const Title = styled.h1`
