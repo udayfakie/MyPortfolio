@@ -21,8 +21,8 @@ const Navbar = () => {
       </Menu>
       <StyledMenu open={open}>
       <a href="/">Home</a>
-      <a href="/about">About Ms</a>
-      <a href="/project">projects</a>
+      <a href="/about">About Me</a>
+      <a href="/project">Projects</a>
       <a href="/contact">Contact</a>
       <a href="/skills">Skills</a>
     </StyledMenu>
