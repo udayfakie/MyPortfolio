@@ -19,18 +19,18 @@ const Navbar = () => {
         <NavbarLinks to="/project">Projects</NavbarLinks>
         <NavbarLinks to="/contact">Contact</NavbarLinks>
       </Menu>
-      <StyledMenu open={open}>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/about">About Me</NavLink>
-      <NavLink to="/project">Projects</NavLink>
-      <NavLink to="/contact">Contact</NavLink>
-      <NavLink to="/skills">Skills</NavLink>
-    </StyledMenu>
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
-      <div />
-      <div />
-      <div />
-    </StyledBurger>
+      <StyledMenu open={open} onClick={() => setOpen(!open)}>
+        <Link to="/">Home</Link>
+        <Link to="/about">About Me</Link>
+        <Link to="/project">Projects</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/skills">Skills</Link>
+      </StyledMenu>
+      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <div />
+        <div />
+        <div />
+      </StyledBurger>
     </Container>
   );
 };
@@ -52,52 +52,49 @@ const Container = styled.nav`
   }
 `;
 const StyledBurger = styled.button`
-position: absolute;
-top: 5%;
-right: 2rem;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-width: 2rem;
-height: 2rem;
-background: transparent;
-border: none;
-cursor: pointer;
-padding: 0;
-z-index: 10;
-@media (min-width: 821px) {
-  display: none;
-}
-&:focus {
-  outline: none;
-}
-
-div {
+  position: absolute;
+  top: 5%;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   width: 2rem;
-  height: 0.25rem;
-  background: ${({ theme, open }) =>
-    open ? theme.primaryDark : theme.primaryLight};
-  border-radius: 10px;
-  transition: all 0.3s linear;
-  position: relative;
-  transform-origin: 1px;
-
-  :first-child {
-    transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  @media (min-width: 821px) {
+    display: none;
+  }
+  &:focus {
+    outline: none;
   }
 
-  :nth-child(2) {
-    opacity: ${({ open }) => (open ? "0" : "1")};
-    transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: ${({ theme, open }) =>
+      open ? theme.primaryDark : theme.primaryLight};
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+    :first-child {
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+    }
+
+    :nth-child(2) {
+      opacity: ${({ open }) => (open ? "0" : "1")};
+      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
+    }
+
+    :nth-child(3) {
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+    }
   }
-
-  :nth-child(3) {
-    transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
-  }
-}
-
-
-
 `;
 
 const StyledMenu = styled.nav`
@@ -136,9 +133,7 @@ const StyledMenu = styled.nav`
       color: ${({ theme }) => theme.primaryHover};
     }
   }
-  
 `;
-
 
 const Menu = styled.ul`
   display: flex;
@@ -147,7 +142,7 @@ const Menu = styled.ul`
   .ative {
     color: orange;
   }
-  @media (max-width:820px){
+  @media (max-width: 820px) {
     display: none;
   }
 `;
@@ -159,8 +154,8 @@ const Left = styled.div`
 `;
 
 const Logo = styled(Link)`
-position: absolute;
-top: 5%;
+  position: absolute;
+  top: 5%;
   text-decoration: none;
   font-weight: 900;
   font-size: 25px;
