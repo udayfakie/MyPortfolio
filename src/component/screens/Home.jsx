@@ -7,14 +7,14 @@ const Home = () => {
   return (
     <Container>
       <Title>
-        HEY THERE<br></br>I'm a FullStack Developer
+        Hey there,<br></br>I'm a FullStack Developer
       </Title>
       <Decription>
-        specialist in frontend development with basic knowledge in developing
-        great user interface and real life interactions
+        with basic knowledge in developing
+        great user interface and real life interactions.
       </Decription>
       <ButtonsContainer>
-        <Button to="/project">View Project</Button>
+        <Button to="/project">View My Work</Button>
         <Resume href="UdayFakieCV.pdf" download="UdayFakieCV.pdf">
           CV
         </Resume>
@@ -33,15 +33,16 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  
 `;
 
-const Title = styled.div`
+const Title = styled.h1`
   font-size: 40px;
-  font-weight: bold;
-  color: #fff;
-  width: 60%;
+  font-family: sans-serif;
+  color: #f5f5f5;
   text-align: center;
-  transition-duration: all 0.5s;
+
   @media (max-width: 740px) {
     font-size: 22px;
   }
@@ -60,6 +61,7 @@ const Decription = styled.p`
 
 const ButtonsContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 const Resume = styled.a`
   text-decoration: none;

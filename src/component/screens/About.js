@@ -22,6 +22,10 @@ export default About;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition: all .5s ease-in-out;
+    @media (max-width: 821px) {
+      padding: 200px;
+}
   `;
 
 const Title = styled.h1`
@@ -29,6 +33,12 @@ const Title = styled.h1`
   font-size: 80px;
   text-transform: capitalize;
   margin-bottom: 20px;
+  transition: all .5s ease-in-out;
+    @media (max-width: 821px) {
+      font-size: 60px;
+      
+     
+}
 `;
 const SubTitle = styled.h2`
   color: gray;
@@ -36,6 +46,11 @@ const SubTitle = styled.h2`
   text-transform: capitalize;
   margin-bottom: 25px;
   letter-spacing: 2px;
+  transition: all .5s ease-in-out;
+  @media (max-width: 821px) {
+    width: 350px;
+
+}
 `;
 const AboutMe = styled.div`
   color: #fff;
@@ -44,5 +59,9 @@ const AboutMe = styled.div`
   line-height: 28px;
   font-size: 18px;
   margin-bottom: 45px;
+  transition: all .5s ease-in-out;
+  @media (max-width: 821px) {
+    width: 350px;
+}
 `;
 

@@ -40,13 +40,13 @@ const Container = styled.div`
 `;
 const MailNavLink = styled(NavLink)`
   font-size: 45px;
-  color: lightslategray;
+  color: #dfd6;
 `;
 
 const Link = styled.a`
   padding: 10px;
   font-size: 40px;
-  color: lightslategray;
+  color: #dfd6;
 `;
 
 // const ChatReactWhatsapp = styled(ReactWhatsapp)`

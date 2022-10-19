@@ -37,15 +37,20 @@ export default Contact;
 
 const Container = styled.div`
   display: flex;
-  padding-top: 60px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: all .5s ease-in-out;
+  @media (max-width: 821px) {
+    padding: 78px 0px;
+  }
 `;
 
 const Form = styled.form`
-  text-align: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Title = styled.h1`
@@ -56,7 +61,7 @@ const Title = styled.h1`
 `;
 
 const Input = styled.input`
-  display: block;
+  display: flex;
   width: 550px;
   padding: 0 20px;
   border: 2px solid rgba(0, 0, 0, 0.1);
@@ -69,9 +74,10 @@ const Input = styled.input`
   font-size: 15px;
   letter-spacing: 0.1px;
   background-color: transparent;
+  transition: all .5s ease-in-out;
   border: 2px solid hsla(0, 0%, 100%, 0.2);
-  @media only screen and (max-width: 600px) {
-    width: 80%;
+  @media only screen and (max-width: 821px) {
+    width: 100%;
   }
 `;
 const Texteara = styled.textarea`
@@ -89,8 +95,9 @@ const Texteara = styled.textarea`
   letter-spacing: 0.1px;
   background-color: transparent;
   border: 2px solid hsla(0, 0%, 100%, 0.2);
-  @media only screen and (max-width: 600px) {
-    width: 80%;
+  transition: all .5s ease-in-out;
+  @media only screen and (max-width: 821px) {
+    width: 100%;
   }
 `;
 const Submit = styled.button`
@@ -108,8 +115,5 @@ const Submit = styled.button`
     color: darkblue;
     background-position: left bottom;
     cursor: pointer;
-  }
-  @media only screen and (max-width: 600px) {
-    margin-right: 50px;
   }
 `;
