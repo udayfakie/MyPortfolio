@@ -20,11 +20,11 @@ const Navbar = () => {
         <NavbarLinks to="/contact">Contact</NavbarLinks>
       </Menu>
       <StyledMenu open={open}>
-      <a href="/">Home</a>
-      <a href="/about">About Me</a>
-      <a href="/project">Projects</a>
-      <a href="/contact">Contact</a>
-      <a href="/skills">Skills</a>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/about">About Me</NavLink>
+      <NavLink to="/project">Projects</NavLink>
+      <NavLink to="/contact">Contact</NavLink>
+      <NavLink to="/skills">Skills</NavLink>
     </StyledMenu>
     <StyledBurger open={open} onClick={() => setOpen(!open)}>
       <div />
