@@ -49,19 +49,15 @@ export default Project;
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   height: 90%;
   display: flex;
-
-  @media only screen and (max-width: 600px) {
+  transition: all 0.5s ease-in-out;
+  @media (max-width: 821px) {
+    flex-wrap: wrap;
     height: 60%;
-  }
-  @media only screen and (min-width: 600px) {
-    height: 40%;
-  }
-  @media only screen and (min-width: 992px) {
-    height: 80%;
+    padding: 100px;
   }
 `;
 const Img = styled.img`
