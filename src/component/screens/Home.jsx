@@ -27,36 +27,33 @@ const Home = () => {
 export default Home;
 
 const Container = styled.div`
-  height: 100vh;
   display: flex;
-  width: 100%;
   flex-direction: column;
-  justify-content: center;
+  padding: 5rem ;
   align-items: center;
-
   
-`;
+
+  `;
 
 const Title = styled.h1`
-  font-size: 40px;
   font-family: sans-serif;
   color: #f5f5f5;
   text-align: center;
-
   @media (max-width: 740px) {
     font-size: 22px;
   }
-`;
+  `;
 
 const Decription = styled.p`
+margin-top: -6px;
+margin-bottom: 20px;
+display: flex;
   flex-wrap: wrap;
   width: 30%;
-  height: 450px;
-  height: auto;
   font-size: 20px;
   color: gray;
   text-align: center;
-  padding: 10px;
+
 `;
 
 const ButtonsContainer = styled.div`

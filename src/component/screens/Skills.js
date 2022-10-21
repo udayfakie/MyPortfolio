@@ -27,13 +27,12 @@ const Skills = () => {
 export default Skills;
 
 const Container = styled.div`
+width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 250px;
-  
-
+  padding: 1rem;
 `;
 const IMAGE = styled.img`
   flex-wrap: wrap;
