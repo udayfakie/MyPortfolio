@@ -7,7 +7,7 @@ const About = () => {
   return (
     <Container>
       <Title>About Me</Title>
-      <SubTitle>I'm A FullStack Web Developer</SubTitle>
+      <SubTitle>I'm A FullStack Developer</SubTitle>
       <AboutMe>{Text}</AboutMe>
     </Container>
   );
@@ -30,7 +30,7 @@ export default About;
 
 const Title = styled.h1`
   color: #fff;
-  font-size: 80px;
+  font-size: 50px;
   text-transform: capitalize;
   margin-bottom: 20px;
   transition: all .5s ease-in-out;

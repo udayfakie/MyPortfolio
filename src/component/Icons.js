@@ -49,9 +49,3 @@ const Link = styled.a`
   color: #dfd6;
 `;
 
-// const ChatReactWhatsapp = styled(ReactWhatsapp)`
-//  padding: 10px;
-//   font-size: 40px;
-//   color: lightslategray;
-//   background-image: url("../assets/whatsapp.png");
-// `;

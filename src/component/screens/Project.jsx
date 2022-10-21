@@ -18,12 +18,13 @@ const Project = () => {
           <Content>
             <Title>{DJ_DRGHAM_SITE}</Title>
             <Desc>
-              <Img src={DJ_SCREEN_SHOT} alt="Iimg" />
+              <Img src={DJ_SCREEN_SHOT} alt="img" />
             </Desc>
             <ViewProject>
               <Link target="_blank" href={DJ_DARGHAM_LINK}>
                 Take A Look
               </Link>
+              <h3>Demo</h3>
             </ViewProject>
           </Content>
         </Card>
@@ -37,6 +38,8 @@ const Project = () => {
               <Link target="_blank" href={MAJICAL_PLANET_LINK}>
                 Take A Look
               </Link>
+              <h3>Demo</h3>
+
             </ViewProject>
           </Content>
         </Card>
