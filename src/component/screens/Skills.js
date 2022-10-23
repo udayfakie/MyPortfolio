@@ -27,27 +27,19 @@ const Skills = () => {
 export default Skills;
 
 const Container = styled.div`
-width: 100%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  padding: 1rem;
+  align-items: center;
+  padding: 5rem;
 `;
 const IMAGE = styled.img`
   flex-wrap: wrap;
   align-items: center;
-
   margin: 20px;
   display: flex; 
   border-radius: 30px; 
   transition: all 0.5s ease-in-out;
-  animation: rotation 3s infinite linear;
   width: 70px;
-  @keyframes rotation {
-  0% {
-    transform: translate(-50%, 100%) rotate(-360deg);
-   
-  }
-  }
 `;

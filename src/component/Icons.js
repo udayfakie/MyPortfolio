@@ -40,12 +40,12 @@ const Container = styled.div`
 `;
 const MailNavLink = styled(NavLink)`
   font-size: 45px;
-  color: #dfd6;
+  color:#3f5668;
 `;
 
 const Link = styled.a`
   padding: 10px;
-  font-size: 40px;
-  color: #dfd6;
+  font-size: 37px;
+  color:#3f5668;
 `;
 

@@ -40,7 +40,7 @@ const Title = styled.h1`
   color: #f5f5f5;
   text-align: center;
   @media (max-width: 740px) {
-    font-size: 22px;
+    font-size: 18px;
   }
   `;
 
@@ -51,8 +51,11 @@ display: flex;
   flex-wrap: wrap;
   width: 30%;
   font-size: 20px;
-  color: gray;
   text-align: center;
+  color: gray;
+  @media (max-width: 740px) {
+    width: 100%;
+  }
 
 `;
 
@@ -76,6 +79,9 @@ const Resume = styled.a`
     background-position: left bottom;
     cursor: pointer;
   }
+  @media (max-width: 740px) {
+    font-size: 10px;
+  }
 `;
 const Button = styled(NavLink)`
   text-decoration: none;
@@ -92,5 +98,9 @@ const Button = styled(NavLink)`
   :hover {
     background-position: left bottom;
     cursor: pointer;
+  }
+
+  @media (max-width: 740px) {
+    font-size: 10px;
   }
 `;

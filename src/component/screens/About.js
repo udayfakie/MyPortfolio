@@ -15,42 +15,37 @@ const About = () => {
 
 export default About;
 
-  const Container = styled.div`
-    width: 100%;
-    padding: 78px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: all .5s ease-in-out;
-    @media (max-width: 821px) {
-      padding: 200px;
-}
-  `;
+const Container = styled.div`
+  width: 100%;
+  padding: 78px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+  @media (max-width: 821px) {
+    padding: 200px;
+  }
+`;
 
 const Title = styled.h1`
-  color: #fff;
-  font-size: 50px;
-  text-transform: capitalize;
-  margin-bottom: 20px;
-  transition: all .5s ease-in-out;
-    @media (max-width: 821px) {
-      font-size: 60px;
-      
-     
-}
+  text-align: center;
+  width: 450px;
+  transition: all 0.5s ease-in-out;
+  @media (max-width: 821px) {
+  }
 `;
 const SubTitle = styled.h2`
   color: gray;
   font-size: 25px;
-  text-transform: capitalize;
-  margin-bottom: 25px;
   letter-spacing: 2px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 450px;
+  display: flex;
+  justify-content: center;
   @media (max-width: 821px) {
-    width: 350px;
-
-}
+    font-size: 15px;
+  }
 `;
 const AboutMe = styled.div`
   color: #fff;
@@ -59,9 +54,8 @@ const AboutMe = styled.div`
   line-height: 28px;
   font-size: 18px;
   margin-bottom: 45px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   @media (max-width: 821px) {
     width: 350px;
-}
+  }
 `;
-
