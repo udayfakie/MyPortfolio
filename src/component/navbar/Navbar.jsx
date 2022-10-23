@@ -92,6 +92,7 @@ const StyledBurger = styled.button`
   }
 `;
 const StyledMenu = styled.nav`
+z-index: 10;
   transform: ${({ open }) => (open ? "translatex(0)" : "translateY(-100%)")};
   display: flex;
   flex-direction: column;
