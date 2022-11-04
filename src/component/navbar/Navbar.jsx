@@ -2,6 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import { useState } from "react";
+import { trans } from "../../styles/GlobalStyles";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -15,14 +16,12 @@ const Navbar = () => {
         <NavbarLinks end to="/">
           Home
         </NavbarLinks>
-        <NavbarLinks to="/about">About</NavbarLinks>
         <NavbarLinks to="/skills">Skills</NavbarLinks>
         <NavbarLinks to="/project">Projects</NavbarLinks>
         <NavbarLinks to="/contact">Contact</NavbarLinks>
       </Menu>
       <StyledMenu open={open} onClick={() => setOpen(!open)}>
         <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
         <Link to="/project">Projects</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/skills">Skills</Link>
@@ -39,6 +38,7 @@ const Navbar = () => {
 export default Navbar;
 
 const Container = styled.nav`
+animation: ${trans} 0.75s;
   width: 100%;
   padding: 1.5rem;
   display: flex;
@@ -159,8 +159,7 @@ const Left = styled.div`
   align-items: center;
 `;
 const Logo = styled(Link)`
-  position: absolute;
-  top: 5%;
+ 
   text-decoration: none;
   font-weight: 900;
   font-size: 25px;

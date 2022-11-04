@@ -1,80 +1,78 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styled ,{keyframes} from "styled-components";
-
+import styled from "styled-components";
+import SocialLinks from "../SocialLinks";
+import { Text } from "../../constant";
+import { trans } from "../../styles/GlobalStyles";
 const Home = () => {
   return (
     <Container>
-      <Title2>Uday Fakie </Title2>
-      <Title>Full-Stack Developer</Title>
+      <Title>Uday Fakie </Title>
+      <AboutMe>{Text}</AboutMe>
       <ButtonsContainer>
         <Button to="/project">View Work</Button>
         <Resume href="UdayFakieCV.pdf" download="UdayFakieCV.pdf">
           CV
         </Resume>
       </ButtonsContainer>
+      <SocialLinks />
     </Container>
   );
 };
 
 export default Home;
-const trans = keyframes`
-from{
-opacity: 0;
-transform: rotateY(-20deg);
-}
-to{
-  opacity: 1;
-transform: rotateX(0);
-}
-`;
+
 const Container = styled.div`
- animation: ${trans} 0.75s;
-  width: 100%;
-  height: auto;
+  animation: ${trans} 0.75s;
   display: flex;
+  width: 100%;
+  height: 600px;
   flex-direction: column;
-  padding: 10rem;
+  justify-content: center;
   align-items: center;
+  transition: all 1s ease-in-out;
   @media (max-width: 740px) {
     padding: 15rem;
   }
-`;
-
-const Title = styled.h1`
-  width: 500px;
-  font-family: "Poppins", sans-serif;
-  color: #f5f5f5;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  @media (max-width: 740px) {
-    font-size: 18px;
+  `;
+const AboutMe = styled.div`
+padding: 10px;
+  color: #fff;
+  width: 550px;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  /* margin-bottom: 45px; */
+  transition: all 0.5s ease-in-out;
+  @media (max-width: 821px) {
+    width: 300px;
   }
 `;
-const Title2 = styled.h3`
-  width: 400px;
-  margin: 0px;
-  font-family: "Poppins", sans-serif;
-  color: #f5f5f5;
-  text-align: center;
-  display: flex;
-  justify-content: center;
 
- 
+
+const Title = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  transition: all 1s ease-in-out;
   @media (max-width: 740px) {
-    font-size: 18px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
 const ButtonsContainer = styled.div`
-  width: 400px;
-  height: auto;
+  height: 50px;
+  width: 240px;
   align-items: center;
   justify-content: center;
   display: flex;
-  flex-wrap: wrap;
-`;
+  `;
 const Resume = styled.a`
   text-decoration: none;
   margin-left: 5px;
@@ -114,6 +112,6 @@ const Button = styled(NavLink)`
   }
 
   @media (max-width: 740px) {
-    font-size:10px;
+    font-size: 10px;
   }
 `;

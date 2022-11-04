@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import emailjs from "@emailjs/browser";
-import Icons from "../Icons";
+import { trans } from "../../styles/GlobalStyles";
 
 const Contact = () => {
   const SendEmails = (e) => {
@@ -18,39 +18,27 @@ const Contact = () => {
 
   return (
     <Container>
-        <Title>Contact</Title>
-      <Right>
-        <Form onSubmit={SendEmails}>
-          <Input type="text" placeholder="Name" name="name" required />
-          <Input type="email" placeholder="Email" name="email" required />
-          <Texteara
-            name="message"
-            rows="7"
-            placeholder="Message"
-            required
-          ></Texteara>
-          <Submit>Submit </Submit>
-        </Form>
-        <Icons />
-      </Right>
+      <Title>Contact</Title>
+      <Form onSubmit={SendEmails}>
+        <Input type="text" placeholder="Name" name="name" required />
+        <Input type="email" placeholder="Email" name="email" required />
+        <Texteara
+          name="message"
+          rows="7"
+          placeholder="Message"
+          required
+        ></Texteara>
+        <Submit>Submit </Submit>
+      </Form>
     </Container>
   );
 };
 
 export default Contact;
-const trans = keyframes`
-from{
-opacity: 0;
-transform: rotateY(-20deg);
-}
-to{
-  opacity: 1;
-transform: rotateX(0);
-}
-`;
+
 const Container = styled.div`
-  margin: 0 auto;
-  width: 70%;
+  width: 100%;
+  height: 600px;
   animation: ${trans} 0.75s;
   display: flex;
   flex-direction: column;
@@ -60,23 +48,9 @@ const Container = styled.div`
   transition: all 0.5s ease-in-out;
   @media (max-width: 821px) {
     padding: 50px 0px;
+    height: 100vh;
   }
 `;
-const Right = styled.div`
-  width: 100%;
-  height: 100vh;
-  flex: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.5s ease-in-out;
-  @media (max-width: 821px) {
-    display: flex;
-    flex-direction: column;
-  
-  }
-`;
-
 
 const Form = styled.form`
   display: flex;
@@ -86,13 +60,12 @@ const Form = styled.form`
   overflow: hidden;
 `;
 
-const Title = styled.h1`
-text-decoration: underline lightgray 5px;
-text-underline-offset: 0.5em;
-margin-right: 24rem;
+const Title = styled.span`
+  font-size: 40px;
+  font-family: "poppinse", sans-serif;
   color: gray;
   transition: all 0.5s ease-in-out;
-  &:hover{
+  &:hover {
     color: #fff;
   }
   transition: all 0.5s ease-in-out;
@@ -143,18 +116,18 @@ const Texteara = styled.textarea`
 const Submit = styled.button`
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
   color: black;
   padding: 10px 30px;
   margin: 10px 0px;
   cursor: pointer;
   border-radius: 10px;
-  background: linear-gradient(to right, #fff 50%, gray 50%);
+  background: linear-gradient(to right, orange 50%, gray 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-in-out;
   :hover {
-    color: darkgray;
+    color: white;
     background-position: left bottom;
     cursor: pointer;
   }

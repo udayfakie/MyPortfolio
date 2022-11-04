@@ -1,5 +1,5 @@
-/* eslint-disable no-use-before-define */
-import { createGlobalStyle } from "styled-components";
+
+import { createGlobalStyle, keyframes} from "styled-components";
 
 
 export const GlobalStyles = createGlobalStyle`
@@ -23,3 +23,23 @@ export const GlobalStyles = createGlobalStyle`
    
   }
   `;
+export const widthFildAnimation = keyframes`
+0% {
+  width: 10%;
+
+}
+100% {
+ 
+}
+`;
+
+export const trans = keyframes`
+from{
+opacity: 0;
+transform: rotateY(-20deg);
+}
+to{
+  opacity: 1;
+transform: rotateX(0);
+}
+`;

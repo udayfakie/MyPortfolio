@@ -8,14 +8,14 @@ import { GITHUB, LINKEDIN,GMAIL_url } from "../constant";
 const Icons = () => {
   return (
     <Container>
-      <Link target="_blank" href={LINKEDIN}>
-        <LinkIn />
-      </Link>
       <Link target="_blank" href={GITHUB}>
         <Git />
       </Link>
       <Link target="_blank" href={GMAIL_url}>
         <Gmail />
+      </Link>
+      <Link target="_blank" href={LINKEDIN}>
+        <LinkIn />
       </Link>
     </Container>
   );
@@ -24,9 +24,10 @@ const Icons = () => {
 export default Icons;
 
 const Container = styled.div`
+padding: 15px;
 display: flex;
-flex-direction: column;
-  margin-left: 50px;
+align-items: center;
+justify-content: center;
   @media (max-width: 821px) {
     display: flex;
     flex-direction: row;
@@ -47,7 +48,7 @@ const Link = styled.a`
 `;
 
 const Gmail = styled(SiGmail)`
-font-size: 40px;
+font-size: 33px;
 color: gray;
 border-radius: 10px;
   transition: all 0.3s ease-in-out;
@@ -60,7 +61,7 @@ border-radius: 10px;
   }
 `
 const Git = styled(AiFillGithub)`
-font-size: 40px;
+font-size: 38px;
 border-radius:15px;
 color: gray;
   transition: all 0.3s ease-in-out;
@@ -73,7 +74,7 @@ color: gray;
   }
 `
 const LinkIn = styled(BsLinkedin)`
-font-size: 40px;
+font-size: 30px;
 color: gray;
 border-radius:15px;
   transition: all 0.3s ease-in-out;

@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import MJICALPLANET from "../../assets/majical-planet-img.png";
 import DJ_SCREEN_SHOT from "../../assets/dj_screen_shot_fit.png";
 import {
@@ -9,6 +9,7 @@ import {
 } from "../../constant";
 
 import { DJ_DRGHAM_SITE } from "../../constant";
+import { trans } from "../../styles/GlobalStyles";
 
 const Project = () => {
   return (
@@ -48,22 +49,14 @@ const Project = () => {
 };
 
 export default Project;
-const trans = keyframes`
-from{
-opacity: 0;
-transform: rotateY(-20deg);
-}
-to{
-  opacity: 1;
-transform: rotateX(0);
-}
-`;
+
 const Container = styled.div`
  animation: ${trans} 0.75s;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   height: 90%;
+
   display: flex;
   transition: all 0.5s ease-in-out;
   @media (max-width: 821px) {
