@@ -1,4 +1,4 @@
-import {GlobalStyles} from './styles/GlobalStyles'
+import { GlobalStyles } from "./styles/GlobalStyles";
 import Navbar from "./component/navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./component/screens/Home";
@@ -18,7 +18,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            {/* <Route path="/about" element={<About />} /> */}
             <Route path="/project" element={<Project />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/skills" element={<Skills />} />

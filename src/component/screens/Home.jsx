@@ -1,18 +1,22 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styled ,{keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
+import Icons from "../Icons";
+import About from "./About";
 
 const Home = () => {
   return (
     <Container>
-      <Title2>Uday Fakie </Title2>
-      <Title>Full-Stack Developer</Title>
+      <Title2> Full-Stack Developer</Title2>
+      <Title>Uday Fakie</Title>
+      <About />
       <ButtonsContainer>
         <Button to="/project">View Work</Button>
         <Resume href="UdayFakieCV.pdf" download="UdayFakieCV.pdf">
           CV
         </Resume>
       </ButtonsContainer>
+      <Icons />
     </Container>
   );
 };
@@ -29,7 +33,7 @@ transform: rotateX(0);
 }
 `;
 const Container = styled.div`
- animation: ${trans} 0.75s;
+  animation: ${trans} 0.75s;
   width: 100%;
   height: auto;
   display: flex;
@@ -43,6 +47,7 @@ const Container = styled.div`
 
 const Title = styled.h1`
   width: 500px;
+  font-size: 48px;
   font-family: "Poppins", sans-serif;
   color: #f5f5f5;
   text-align: center;
@@ -61,7 +66,6 @@ const Title2 = styled.h3`
   display: flex;
   justify-content: center;
 
- 
   @media (max-width: 740px) {
     font-size: 18px;
   }
@@ -114,6 +118,6 @@ const Button = styled(NavLink)`
   }
 
   @media (max-width: 740px) {
-    font-size:10px;
+    font-size: 10px;
   }
 `;

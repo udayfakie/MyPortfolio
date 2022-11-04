@@ -15,7 +15,7 @@ const Navbar = () => {
         <NavbarLinks end to="/">
           Home
         </NavbarLinks>
-        <NavbarLinks to="/about">About</NavbarLinks>
+        {/* <NavbarLinks to="/about">About</NavbarLinks> */}
         <NavbarLinks to="/skills">Skills</NavbarLinks>
         <NavbarLinks to="/project">Projects</NavbarLinks>
         <NavbarLinks to="/contact">Contact</NavbarLinks>

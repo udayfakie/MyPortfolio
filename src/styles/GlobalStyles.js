@@ -1,6 +1,5 @@
 /* eslint-disable no-use-before-define */
-import { createGlobalStyle } from "styled-components";
-
+import { createGlobalStyle, keyframes } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   html, body {
@@ -23,3 +22,13 @@ export const GlobalStyles = createGlobalStyle`
    
   }
   `;
+
+export const widthFillAnimation = keyframes`
+0% {
+  width: 10%;
+
+}
+100% {
+ 
+}
+`;
