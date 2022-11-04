@@ -5,7 +5,7 @@ import Home from "./component/screens/Home";
 import About from "./component/screens/About";
 import Project from "./component/screens/Project";
 import Contact from "./component/screens/Contact";
-import Skills from "./component/screens/Skills";
+import Skills from "./component/progress/Skills";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 

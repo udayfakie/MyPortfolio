@@ -1,32 +1,22 @@
 import React from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
-// import { AiOutlineWhatsApp } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
-import { GITHUB, LINKEDIN } from "../constant";
-// import ReactWhatsapp from "react-whatsapp";
-
+import { GITHUB, LINKEDIN,GMAIL_url } from "../constant";
 
 const Icons = () => {
   return (
     <Container>
-    
-      {/* <ChatReactWhatsapp number="+972547084239" message="Hello !!!" /> */}
-      {/* <Chat>
-      <AiOutlineWhatsApp/>
-      </Chat> */}
-
       <Link target="_blank" href={LINKEDIN}>
-        <BsLinkedin />
+        <LinkIn />
       </Link>
       <Link target="_blank" href={GITHUB}>
-        <AiFillGithub />
+        <Git />
       </Link>
-      <MailNavLink to="/contact">
-        <SiGmail />
-      </MailNavLink>
+      <Link target="_blank" href={GMAIL_url}>
+        <Gmail />
+      </Link>
     </Container>
   );
 };
@@ -34,18 +24,64 @@ const Icons = () => {
 export default Icons;
 
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 40px;
+display: flex;
+flex-direction: column;
+  margin-left: 50px;
+  @media (max-width: 821px) {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin: 15px;
+  
+  }
+ 
 `;
-const MailNavLink = styled(NavLink)`
-  font-size: 45px;
-  color:#3f5668;
-`;
+
 
 const Link = styled.a`
-  padding: 10px;
-  font-size: 37px;
-  color:#3f5668;
+  color: #fff;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+
 `;
 
+const Gmail = styled(SiGmail)`
+font-size: 40px;
+color: gray;
+border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+&:hover{
+  color: #fff;
+}
+@media (max-width: 821px) {
+    font-size: 35px;
+    
+  }
+`
+const Git = styled(AiFillGithub)`
+font-size: 40px;
+border-radius:15px;
+color: gray;
+  transition: all 0.3s ease-in-out;
+&:hover{
+  color: #fff;
+}
+@media (max-width: 821px) {
+    font-size: 35px;
+    
+  }
+`
+const LinkIn = styled(BsLinkedin)`
+font-size: 40px;
+color: gray;
+border-radius:15px;
+  transition: all 0.3s ease-in-out;
+&:hover{
+  color: #fff;
+}
+@media (max-width: 821px) {
+    font-size: 35px;
+    
+  }
+`
