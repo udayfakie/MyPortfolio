@@ -1,27 +1,27 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useState } from "react";
+import { trans } from "../../styles/GlobalStyles";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
   return (
     <Container>
       <Left>
-        <Logo to="/">UdayFakie</Logo>
+        <Logo to="/">Uday</Logo>
       </Left>
       <Menu>
         <NavbarLinks end to="/">
           Home
         </NavbarLinks>
-        <NavbarLinks to="/about">About Me</NavbarLinks>
         <NavbarLinks to="/skills">Skills</NavbarLinks>
         <NavbarLinks to="/project">Projects</NavbarLinks>
         <NavbarLinks to="/contact">Contact</NavbarLinks>
       </Menu>
       <StyledMenu open={open} onClick={() => setOpen(!open)}>
         <Link to="/">Home</Link>
-        <Link to="/about">About Me</Link>
         <Link to="/project">Projects</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/skills">Skills</Link>
@@ -38,17 +38,22 @@ const Navbar = () => {
 export default Navbar;
 
 const Container = styled.nav`
+animation: ${trans} 0.75s;
   width: 100%;
   padding: 1.5rem;
   display: flex;
   align-items: center;
   .active {
-    color: #704106;
+    color: #3c2305;
+  }
+  & :hover {
+    color: orange;
   }
   @media (max-width: 820px) {
     width: 50%;
   }
 `;
+
 const StyledBurger = styled.button`
   position: absolute;
   top: 5%;
@@ -92,7 +97,7 @@ const StyledBurger = styled.button`
   }
 `;
 const StyledMenu = styled.nav`
-z-index: 10;
+  z-index: 10;
   transform: ${({ open }) => (open ? "translatex(0)" : "translateY(-100%)")};
   display: flex;
   flex-direction: column;
@@ -108,6 +113,7 @@ z-index: 10;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
   }
+
   a {
     font-size: 2rem;
     padding: 2rem 0;
@@ -125,10 +131,19 @@ z-index: 10;
     }
   }
 `;
+const rotate = keyframes`
+from{
+transform: rotate(0deg);
+}
+to{
+  transform: rotate(360deg);
+}
+`;
 const Menu = styled.ul`
   display: flex;
   list-style: none;
   margin-left: 200px;
+
   .ative {
     color: orange;
   }
@@ -136,6 +151,7 @@ const Menu = styled.ul`
     display: none;
   }
 `;
+
 const Left = styled.div`
   display: flex;
   justify-content: space-between;
@@ -143,13 +159,17 @@ const Left = styled.div`
   align-items: center;
 `;
 const Logo = styled(Link)`
-  position: absolute;
-  top: 5%;
+ 
   text-decoration: none;
   font-weight: 900;
   font-size: 25px;
   color: #fff;
   cursor: pointer;
+  transition: all 1s ease-in-out;
+  &:hover {
+    animation: ${rotate} 5s linear;
+    color: #fff;
+  }
 `;
 const NavbarLinks = styled(NavLink)`
   text-decoration: none;
@@ -158,14 +178,9 @@ const NavbarLinks = styled(NavLink)`
   margin-right: 30px;
   color: gray;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
   &:hover {
-  }
-  @media only screen and (min-width: 600px) {
-    font-size: 15px;
-    margin-right: 15px;
-  }
-  @media only screen and (min-width: 992px) {
-    font-size: 20px;
-    margin-right: 30px;
+    text-decoration: underline #3c2305 0rem;
+    text-underline-offset: 0.5em;
   }
 `;
