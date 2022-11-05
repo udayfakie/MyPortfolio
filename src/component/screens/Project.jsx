@@ -18,28 +18,29 @@ const Project = () => {
         <Card>
           <Content>
             <Title>{DJ_DRGHAM_SITE}</Title>
-            <Description>Resposive Dj Website technology React.js </Description>
-            <ImgWrapper>
+            <Desc>
               <Img src={DJ_SCREEN_SHOT} alt="img" />
-            </ImgWrapper>
+            </Desc>
             <ViewProject>
               <Link target="_blank" href={DJ_DARGHAM_LINK}>
                 Take A Look
               </Link>
+              <h3>Demo</h3>
             </ViewProject>
           </Content>
         </Card>
         <Card>
           <Content>
             <Title>{MagicalPlanet}</Title>
-            <Description>Beautifull Design. technology HTML & CSS</Description>
-            <ImgWrapper>
+            <Desc>
               <Img src={MJICALPLANET} alt="PLANET" />
-            </ImgWrapper>
+            </Desc>
             <ViewProject>
               <Link target="_blank" href={MAJICAL_PLANET_LINK}>
                 Take A Look
               </Link>
+              <h3>Demo</h3>
+
             </ViewProject>
           </Content>
         </Card>
@@ -51,7 +52,6 @@ const Project = () => {
 export default Project;
 
 const Container = styled.div`
- animation: ${trans} 0.75s;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -65,14 +65,6 @@ const Container = styled.div`
     padding: 100px;
   }
 `;
-const Description = styled.span`
-width: 250px;
-margin: 15px;
-letter-spacing: .1em;
-font-size: 13px;
-font-family: 'poppins', sans-serif;
-font-weight: bold;
-`
 const Img = styled.img`
   width: 300px;
   height: 140px;
@@ -112,14 +104,9 @@ const Title = styled.h3`
   color: gray;
   font-weight: 800;
   margin: 15px;
-  margin: 0px;
-  transition: all 0.5s ease-in-out;
-  &:hover{
-    color: #fff;
-  }
 `;
 
-const ImgWrapper = styled.div`
+const Desc = styled.div`
   color: gray;
   font-size: 15px;
 `;

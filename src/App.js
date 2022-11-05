@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./component/screens/Home";
 import Project from "./component/screens/Project";
 import Contact from "./component/screens/Contact";
-import Skills from "./component/progress/Skills";
+import Skills from "./component/screens/Skills";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 

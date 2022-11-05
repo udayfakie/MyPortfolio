@@ -1,22 +1,41 @@
 import React from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
+// import { AiOutlineWhatsApp } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import styled from "styled-components";
-import { GITHUB, LINKEDIN,GMAIL_url } from "../constant";
+import { NavLink } from "react-router-dom";
+import { GITHUB, LINKEDIN } from "../constant";
+// import ReactWhatsapp from "react-whatsapp";
+
 
 const Icons = () => {
   return (
     <Container>
+<<<<<<< HEAD:src/component/SocialLinks.js
+=======
+    
+      {/* <ChatReactWhatsapp number="+972547084239" message="Hello !!!" /> */}
+      {/* <Chat>
+      <AiOutlineWhatsApp/>
+      </Chat> */}
+
+      <Link target="_blank" href={LINKEDIN}>
+        <BsLinkedin />
+      </Link>
+>>>>>>> parent of 31f8b30 ( chech):src/component/Icons.js
       <Link target="_blank" href={GITHUB}>
-        <Git />
+        <AiFillGithub />
       </Link>
-      <Link target="_blank" href={GMAIL_url}>
-        <Gmail />
-      </Link>
+<<<<<<< HEAD:src/component/SocialLinks.js
       <Link target="_blank" href={LINKEDIN}>
         <LinkIn />
       </Link>
+=======
+      <MailNavLink to="/contact">
+        <SiGmail />
+      </MailNavLink>
+>>>>>>> parent of 31f8b30 ( chech):src/component/Icons.js
     </Container>
   );
 };
@@ -24,6 +43,7 @@ const Icons = () => {
 export default Icons;
 
 const Container = styled.div`
+<<<<<<< HEAD:src/component/SocialLinks.js
 padding: 15px;
 display: flex;
 align-items: center;
@@ -36,17 +56,24 @@ justify-content: center;
   
   }
  
+=======
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
 `;
-
+const MailNavLink = styled(NavLink)`
+  font-size: 45px;
+  color:#3f5668;
+>>>>>>> parent of 31f8b30 ( chech):src/component/Icons.js
+`;
 
 const Link = styled.a`
-  color: #fff;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-
+  padding: 10px;
+  font-size: 37px;
+  color:#3f5668;
 `;
 
+<<<<<<< HEAD:src/component/SocialLinks.js
 const Gmail = styled(SiGmail)`
 font-size: 33px;
 color: gray;
@@ -86,3 +113,5 @@ border-radius:15px;
     
   }
 `
+=======
+>>>>>>> parent of 31f8b30 ( chech):src/component/Icons.js

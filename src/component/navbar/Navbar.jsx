@@ -1,27 +1,34 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { useState } from "react";
 import { trans } from "../../styles/GlobalStyles";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
   return (
     <Container>
       <Left>
-        <Logo to="/">Uday</Logo>
+        <Logo to="/">UdayFakie</Logo>
       </Left>
       <Menu>
         <NavbarLinks end to="/">
           Home
         </NavbarLinks>
+<<<<<<< HEAD
+=======
+        <NavbarLinks to="/about">About Me</NavbarLinks>
+>>>>>>> parent of 31f8b30 ( chech)
         <NavbarLinks to="/skills">Skills</NavbarLinks>
         <NavbarLinks to="/project">Projects</NavbarLinks>
         <NavbarLinks to="/contact">Contact</NavbarLinks>
       </Menu>
       <StyledMenu open={open} onClick={() => setOpen(!open)}>
         <Link to="/">Home</Link>
+<<<<<<< HEAD
+=======
+        <Link to="/about">About Me</Link>
+>>>>>>> parent of 31f8b30 ( chech)
         <Link to="/project">Projects</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/skills">Skills</Link>
@@ -44,16 +51,12 @@ animation: ${trans} 0.75s;
   display: flex;
   align-items: center;
   .active {
-    color: #3c2305;
-  }
-  & :hover {
-    color: orange;
+    color: #704106;
   }
   @media (max-width: 820px) {
     width: 50%;
   }
 `;
-
 const StyledBurger = styled.button`
   position: absolute;
   top: 5%;
@@ -97,7 +100,7 @@ const StyledBurger = styled.button`
   }
 `;
 const StyledMenu = styled.nav`
-  z-index: 10;
+z-index: 10;
   transform: ${({ open }) => (open ? "translatex(0)" : "translateY(-100%)")};
   display: flex;
   flex-direction: column;
@@ -113,7 +116,6 @@ const StyledMenu = styled.nav`
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
   }
-
   a {
     font-size: 2rem;
     padding: 2rem 0;
@@ -131,19 +133,10 @@ const StyledMenu = styled.nav`
     }
   }
 `;
-const rotate = keyframes`
-from{
-transform: rotate(0deg);
-}
-to{
-  transform: rotate(360deg);
-}
-`;
 const Menu = styled.ul`
   display: flex;
   list-style: none;
   margin-left: 200px;
-
   .ative {
     color: orange;
   }
@@ -151,7 +144,6 @@ const Menu = styled.ul`
     display: none;
   }
 `;
-
 const Left = styled.div`
   display: flex;
   justify-content: space-between;
@@ -165,11 +157,6 @@ const Logo = styled(Link)`
   font-size: 25px;
   color: #fff;
   cursor: pointer;
-  transition: all 1s ease-in-out;
-  &:hover {
-    animation: ${rotate} 5s linear;
-    color: #fff;
-  }
 `;
 const NavbarLinks = styled(NavLink)`
   text-decoration: none;
@@ -178,9 +165,14 @@ const NavbarLinks = styled(NavLink)`
   margin-right: 30px;
   color: gray;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
   &:hover {
-    text-decoration: underline #3c2305 0rem;
-    text-underline-offset: 0.5em;
+  }
+  @media only screen and (min-width: 600px) {
+    font-size: 15px;
+    margin-right: 15px;
+  }
+  @media only screen and (min-width: 992px) {
+    font-size: 20px;
+    margin-right: 30px;
   }
 `;
