@@ -15,20 +15,18 @@ const Navbar = () => {
         <NavbarLinks end to="/">
           Home
         </NavbarLinks>
-<<<<<<< HEAD
-=======
+
         <NavbarLinks to="/about">About Me</NavbarLinks>
->>>>>>> parent of 31f8b30 ( chech)
+
         <NavbarLinks to="/skills">Skills</NavbarLinks>
         <NavbarLinks to="/project">Projects</NavbarLinks>
         <NavbarLinks to="/contact">Contact</NavbarLinks>
       </Menu>
       <StyledMenu open={open} onClick={() => setOpen(!open)}>
         <Link to="/">Home</Link>
-<<<<<<< HEAD
-=======
+
         <Link to="/about">About Me</Link>
->>>>>>> parent of 31f8b30 ( chech)
+
         <Link to="/project">Projects</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/skills">Skills</Link>
