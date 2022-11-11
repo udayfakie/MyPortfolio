@@ -1,6 +1,6 @@
 import {GlobalStyles} from './styles/GlobalStyles'
 import Navbar from "./component/navbar/Navbar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter  as Router, Routes, Route } from "react-router-dom";
 import Home from "./component/screens/Home";
 import Project from "./component/screens/Project";
 import Contact from "./component/screens/Contact";
