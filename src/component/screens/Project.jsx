@@ -11,10 +11,10 @@ import {
 import { DJ_DRGHAM_SITE } from "../../constant";
 import { trans } from "../../styles/GlobalStyles";
 
-const Project = () => {
+const Project = ({forwardeRef}) => {
   return (
-    <>
-      <Container>
+  
+      <Container ref={forwardeRef}>
         <Card>
           <Content>
             <Title>{DJ_DRGHAM_SITE}</Title>
@@ -44,7 +44,7 @@ const Project = () => {
           </Content>
         </Card>
       </Container>
-    </>
+    
   );
 };
 
@@ -54,8 +54,9 @@ const Container = styled.div`
  animation: ${trans} 0.75s;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  height: 90%;
+  height: 100vh;
 
   display: flex;
   transition: all 0.5s ease-in-out;

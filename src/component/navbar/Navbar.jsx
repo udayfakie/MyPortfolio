@@ -3,51 +3,80 @@ import { Link, NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import { useState } from "react";
 import { trans } from "../../styles/GlobalStyles";
+import { useRef } from "react";
+import Skills from "../progress/Skills";
+import Project from "../screens/Project";
+import Contact from "../screens/Contact";
+import Home from "../screens/Home";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
+  const ski = useRef(null);
+  const project = useRef(null);
+  const contact = useRef(null);
+  const ScrollTo = (eleRef) => {
+    window.scrollTo({
+      top: eleRef.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
   return (
-    <Container>
-      <Left>
-        <Logo to="/">Uday</Logo>
-      </Left>
-      <Menu>
-        <NavbarLinks end to="/">
-          Home
-        </NavbarLinks>
-        <NavbarLinks to="/skills">Skills</NavbarLinks>
-        <NavbarLinks to="/project">Projects</NavbarLinks>
-        <NavbarLinks to="/contact">Contact</NavbarLinks>
-      </Menu>
-      <StyledMenu open={open} onClick={() => setOpen(!open)}>
-        <Link to="/">Home</Link>
-        <Link to="/project">Projects</Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/skills">Skills</Link>
-      </StyledMenu>
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
-        <div />
-        <div />
-        <div />
-      </StyledBurger>
-    </Container>
+    <>
+      <Container>
+        <Left>
+          <Logo to="/">Uday</Logo>
+        </Left>
+        <Menu>
+          <NavbarLinks end to="/">
+            Home
+          </NavbarLinks>
+          <NavbarLinks onClick={() => ScrollTo(ski)} to="/skills">
+            Skills
+          </NavbarLinks>
+          <NavbarLinks onClick={() => ScrollTo(project)} to="/project">
+            Projects
+          </NavbarLinks>
+          <NavbarLinks onClick={() => ScrollTo(contact)} to="/contact">
+            Contact
+          </NavbarLinks>
+        </Menu>
+        <StyledMenu open={open} onClick={() => setOpen(!open)}>
+          <NavLink to="/">Home</NavLink>
+          <NavLink onClick={() => ScrollTo(project)} to="/project">
+            Projects
+          </NavLink>
+          <NavLink onClick={() => ScrollTo(ski)} to="/skills">
+            Skills
+          </NavLink>
+          <NavLink onClick={() => ScrollTo(contact)} to="/contact">
+            Contact
+          </NavLink>
+        </StyledMenu>
+        <StyledBurger open={open} onClick={() => setOpen(!open)}>
+          <div />
+          <div />
+          <div />
+        </StyledBurger>
+      </Container>
+      <Home />
+      <Skills forwardeRef={ski} />
+      <Project forwardeRef={project} />
+      <Contact forwardeRef={contact} />
+    </>
   );
 };
 
 export default Navbar;
 
 const Container = styled.nav`
-animation: ${trans} 0.75s;
+  animation: ${trans} 0.75s;
   width: 100%;
   padding: 1.5rem;
   display: flex;
   align-items: center;
-  .active {
-    color: #3c2305;
-  }
+
   & :hover {
-    color: orange;
+    color: lightgray;
   }
   @media (max-width: 820px) {
     width: 50%;
@@ -144,7 +173,7 @@ const Menu = styled.ul`
   list-style: none;
   margin-left: 200px;
 
-  .ative {
+  .active {
     color: orange;
   }
   @media (max-width: 820px) {
@@ -159,7 +188,6 @@ const Left = styled.div`
   align-items: center;
 `;
 const Logo = styled(Link)`
- 
   text-decoration: none;
   font-weight: 900;
   font-size: 25px;

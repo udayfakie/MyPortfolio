@@ -4,19 +4,24 @@ import styled from "styled-components";
 import SocialLinks from "../SocialLinks";
 import { Text } from "../../constant";
 import { trans } from "../../styles/GlobalStyles";
+
+
 const Home = () => {
   return (
-    <Container>
-      <Title>Uday Fakie </Title>
-      <AboutMe>{Text}</AboutMe>
-      <ButtonsContainer>
-        <Button to="/project">View Work</Button>
-        <Resume href="UdayFakieCV.pdf" download="UdayFakieCV.pdf">
-          CV
-        </Resume>
-      </ButtonsContainer>
-      <SocialLinks />
-    </Container>
+    <>
+      <Container>
+        <Title>Uday Fakie </Title>
+        <AboutMe>{Text}</AboutMe>
+        <ButtonsContainer>
+          <Button to="/project">View Work</Button>
+          <Resume href="UdayFakieCV.pdf" download="UdayFakieCV.pdf">
+            CV
+          </Resume>
+        </ButtonsContainer>
+        <SocialLinks />
+      </Container>
+      
+    </>
   );
 };
 
@@ -34,9 +39,9 @@ const Container = styled.div`
   @media (max-width: 740px) {
     padding: 15rem;
   }
-  `;
+`;
 const AboutMe = styled.div`
-padding: 10px;
+  padding: 10px;
   color: #fff;
   width: 550px;
   letter-spacing: 1px;
@@ -48,7 +53,6 @@ padding: 10px;
     width: 300px;
   }
 `;
-
 
 const Title = styled.span`
   display: flex;
@@ -72,7 +76,7 @@ const ButtonsContainer = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
-  `;
+`;
 const Resume = styled.a`
   text-decoration: none;
   margin-left: 5px;

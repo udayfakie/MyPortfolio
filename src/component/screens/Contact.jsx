@@ -1,9 +1,9 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import { trans } from "../../styles/GlobalStyles";
 
-const Contact = () => {
+const Contact = ({forwardeRef}) => {
   const SendEmails = (e) => {
     e.preventDefault();
     emailjs.sendForm(
@@ -17,7 +17,7 @@ const Contact = () => {
   };
 
   return (
-    <Container>
+    <Container ref={forwardeRef}>
       <Title>Contact</Title>
       <Form onSubmit={SendEmails}>
         <Input type="text" placeholder="Name" name="name" required />
@@ -116,7 +116,7 @@ const Texteara = styled.textarea`
 const Submit = styled.button`
   text-decoration: none;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 18px;
   color: black;
   padding: 10px 30px;
   margin: 10px 0px;
