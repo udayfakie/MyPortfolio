@@ -36,7 +36,6 @@ const ScrollButton = () => {
 export default ScrollButton;
 
 const Button = styled.div`
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,14 +48,4 @@ const Button = styled.div`
   z-index: 1;
   cursor: pointer;
   color: gray;
-  @media (max-width: 820px) {
-    left: 20rem;
-    bottom: 60px;
-  }
-  @media (max-width: 420px) {
-    left: 8rem;
-    bottom: 30px;
-
-  }
-
 `;

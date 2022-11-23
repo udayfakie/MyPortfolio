@@ -19,6 +19,10 @@ export default Skills;
 const Container = styled.div`
   display: flex;
   height: 100vh;
+  @media (max-width: 414px) {
+    width: 100%;
+
+  }
 `;
 
 const Title = styled.h1`
