@@ -36,8 +36,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   transition: all 1s ease-in-out;
-  @media (max-width: 740px) {
+  @media (max-width: 414px) {
     padding: 15rem;
+    width: 100%;
+
   }
 `;
 const AboutMe = styled.div`
