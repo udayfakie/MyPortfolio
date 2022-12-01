@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import SocialLinks from "../SocialLinks";
 import { Text } from "../../constant";
@@ -13,7 +13,7 @@ const Home = () => {
         <Title>Uday Fakie </Title>
         <AboutMe>{Text}</AboutMe>
         <ButtonsContainer>
-          <Button to="/project">View Work</Button>
+          {/* <Button to="/project">View Work</Button> */}
           <Resume href="UdayFakieCV.pdf" download="UdayFakieCV.pdf">
             CV
           </Resume>
@@ -81,6 +81,8 @@ const ButtonsContainer = styled.div`
 `;
 const Resume = styled.a`
   text-decoration: none;
+  width: 50%;
+  text-align: center;
   margin-left: 5px;
   font-weight: bold;
   color: #000;
@@ -99,25 +101,25 @@ const Resume = styled.a`
     font-size: 10px;
   }
 `;
-const Button = styled(NavLink)`
-  text-decoration: none;
-  margin-left: 5px;
-  font-weight: bold;
-  color: #000;
-  background: linear-gradient(to right, aliceblue 40%, orange 50%);
-  padding: 10px 30px;
-  cursor: pointer;
-  border-radius: 10px;
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all 0.7s ease-in-out;
+// const Button = styled(NavLink)`
+//   text-decoration: none;
+//   margin-left: 5px;
+//   font-weight: bold;
+//   color: #000;
+//   background: linear-gradient(to right, aliceblue 40%, orange 50%);
+//   padding: 10px 30px;
+//   cursor: pointer;
+//   border-radius: 10px;
+//   background-size: 200% 100%;
+//   background-position: right bottom;
+//   transition: all 0.7s ease-in-out;
 
-  :hover {
-    background-position: left bottom;
-    cursor: pointer;
-  }
+//   :hover {
+//     background-position: left bottom;
+//     cursor: pointer;
+//   }
 
-  @media (max-width: 740px) {
-    font-size: 10px;
-  }
-`;
+//   @media (max-width: 740px) {
+//     font-size: 10px;
+//   }
+// `;
