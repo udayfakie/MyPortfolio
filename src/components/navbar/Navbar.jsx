@@ -5,9 +5,9 @@ import { useState } from "react";
 import { trans } from "../../styles/GlobalStyles";
 import { useRef } from "react";
 import Skills from "../progress/Skills";
-import Project from "../screens/Project";
-import Contact from "../screens/Contact";
-import Home from "../screens/Home";
+import Project from "../../screens/Projects";
+import Contact from "../../screens/Contact";
+import Home from "../../screens/Home";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -52,11 +52,11 @@ const Navbar = () => {
             Contact
           </NavLink>
         </StyledMenu>
-        <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        {/* <StyledBurger open={open} onClick={() => setOpen(!open)}>
           <div />
           <div />
           <div />
-        </StyledBurger>
+        </StyledBurger> */}
       </Container>
       <Home />
       <Skills forwardeRef={ski} />

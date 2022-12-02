@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { trans } from "../../styles/GlobalStyles";
 import Progress from "./Progress";
+import { LABELS } from "../../constants";
 
 const Skills = ({ forwardeRef }) => {
   return (
     <Container ref={forwardeRef}>
       <SubContainer>
-        <Title>Technology</Title>
+        <Title>{LABELS.TECH}</Title>
         <Progress />
       </SubContainer>
     </Container>
@@ -21,7 +22,6 @@ const Container = styled.div`
   height: 100vh;
   @media (max-width: 414px) {
     width: 100%;
-
   }
 `;
 

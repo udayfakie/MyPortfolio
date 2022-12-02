@@ -1,5 +1,5 @@
 import { GlobalStyles } from "./styles/GlobalStyles";
-import Navbar from "./component/navbar/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 // import Home from "./component/screens/Home";
 // import Project from "./component/screens/Project";
@@ -7,7 +7,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 // import Skills from "./component/progress/Skills";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
-import ScrollToTop from "./component/ScrollButton";
+import ScrollToTop from "./components/ScrollButton";
 
 const App = () => {
   return (

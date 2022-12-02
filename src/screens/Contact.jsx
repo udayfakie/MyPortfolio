@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
-import { trans } from "../../styles/GlobalStyles";
+import { trans } from "../styles/GlobalStyles";
+import { LABELS, LABELS_ARRAY } from "../constants";
 
-const Contact = ({forwardeRef}) => {
+const Contact = ({ forwardeRef }) => {
   const SendEmails = (e) => {
     e.preventDefault();
     emailjs.sendForm(
@@ -18,16 +19,16 @@ const Contact = ({forwardeRef}) => {
 
   return (
     <Container ref={forwardeRef}>
-      <Title>Contact</Title>
+      <Title>{LABELS["CONTACT"]}</Title>
       <Form onSubmit={SendEmails}>
         <Input type="text" placeholder="Name" name="name" required />
         <Input type="email" placeholder="Email" name="email" required />
-        <Texteara
+        <TextArea
           name="message"
           rows="7"
           placeholder="Message"
           required
-        ></Texteara>
+        ></TextArea>
         <Submit>Submit </Submit>
       </Form>
     </Container>
@@ -65,6 +66,7 @@ const Title = styled.span`
   font-family: "poppinse", sans-serif;
   color: gray;
   transition: all 0.5s ease-in-out;
+  margin-bottom: 10px;
   &:hover {
     color: #fff;
   }
@@ -94,7 +96,7 @@ const Input = styled.input`
     width: 100%;
   }
 `;
-const Texteara = styled.textarea`
+const TextArea = styled.textarea`
   display: block;
   width: 400px;
   padding: 0 20px;

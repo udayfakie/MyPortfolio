@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { items } from "../../constant";
+import { SKILLS } from "../../constants";
 import { widthFildAnimation } from "../../styles/GlobalStyles";
 
 const Progress = () => {
   return (
     <>
-      {items
-        .sort((a, b) => b.percentage - a.percentage)
-        .map((item, index) => {
-          const { name, icon, percentage } = item;
+      {SKILLS.sort((a, b) => b.percentage - a.percentage).map(
+        (skill, index) => {
+          const { name, icon, percentage } = skill;
           return (
             <Container key={index}>
               <Text>{name}</Text>
@@ -19,13 +18,13 @@ const Progress = () => {
               </ProgressContainer>
             </Container>
           );
-        })}
+        }
+      )}
     </>
   );
 };
 
 export default Progress;
-
 
 const Container = styled.div`
   display: flex;
@@ -35,7 +34,6 @@ const Container = styled.div`
   height: 45px;
   @media (max-width: 430px) {
     width: 80%;
-  
   }
 `;
 const Img = styled.img`
@@ -45,7 +43,6 @@ const Img = styled.img`
   @media (max-width: 430px) {
     width: 30px;
     height: 30px;
-  
   }
 `;
 const Text = styled.span`
@@ -71,7 +68,6 @@ const ProgressContainer = styled.div`
   @media (max-width: 430px) {
     /* width: 30px;
     height: 30px; */
-  
   }
 `;
 const Bar = styled.span`
