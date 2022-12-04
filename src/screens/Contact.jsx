@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import { trans } from "../styles/GlobalStyles";
-import { LABELS, LABELS_ARRAY } from "../constants";
+import { LABELS } from "../constants";
 
 const Contact = ({ forwardeRef }) => {
   const SendEmails = (e) => {

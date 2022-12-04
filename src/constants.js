@@ -38,17 +38,10 @@ export const SKILLS = [
   {
     id: 7,
     icon: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
-    name: "JAVASCRIPT",
+    name: "JS",
     percentage: 90,
   },
 ];
-
-// export const DJ_DARGHAM_LINK = "https://dj-dargham.netlify.app/";
-// export const LINKEDIN = "https://www.linkedin.com/in/uday-fakie/";
-// export const GITHUB = "https://github.com/udayfakie";
-// export const GMAIL_url = "mailto:uday.tnd3@gmail.com";
-// export const MAJICAL_PLANET_LINK =
-//   "https://genuine-narwhal-bc3817.netlify.app/";
 
 const DARGHAM = "https://dj-dargham.netlify.app/";
 const LINKEDIN = "https://www.linkedin.com/in/uday-fakie/";
