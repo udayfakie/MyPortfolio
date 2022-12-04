@@ -35,23 +35,26 @@ export default Project;
 const Container = styled.div`
   animation: ${trans} 0.75s;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-
   display: flex;
   transition: all 0.5s ease-in-out;
   @media (max-width: 821px) {
     flex-wrap: wrap;
     height: 60%;
-    padding: 100px;
+    padding: 40px;
   }
 `;
 
 const ProjectsContainer = styled.span`
+  width: 100%;
+  flex-wrap: wrap;
+  height: auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.8s ease-in-out;
 `;
 
 const MainTitle = styled.h1`

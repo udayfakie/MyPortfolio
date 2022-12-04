@@ -3,23 +3,10 @@ import { Link, NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import { useState } from "react";
 import { trans } from "../../styles/GlobalStyles";
-import { useRef } from "react";
-import Skills from "../progress/Skills";
-import Project from "../../screens/Projects";
-import Contact from "../../screens/Contact";
-import Home from "../../screens/Home";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const ski = useRef(null);
-  const project = useRef(null);
-  const contact = useRef(null);
-  const ScrollTo = (eleRef) => {
-    window.scrollTo({
-      top: eleRef.current.offsetTop,
-      behavior: "smooth",
-    });
-  };
+
   return (
     <>
       <Container>
@@ -30,38 +17,22 @@ const Navbar = () => {
           <NavbarLinks end to="/">
             Home
           </NavbarLinks>
-          <NavbarLinks onClick={() => ScrollTo(ski)} to="/skills">
-            Skills
-          </NavbarLinks>
-          <NavbarLinks onClick={() => ScrollTo(project)} to="/project">
-            Projects
-          </NavbarLinks>
-          <NavbarLinks onClick={() => ScrollTo(contact)} to="/contact">
-            Contact
-          </NavbarLinks>
+          <NavbarLinks to="/skills">Skills</NavbarLinks>
+          <NavbarLinks to="/project">Projects</NavbarLinks>
+          <NavbarLinks to="/contact">Contact</NavbarLinks>
         </Menu>
         <StyledMenu open={open} onClick={() => setOpen(!open)}>
           <NavLink to="/">Home</NavLink>
-          <NavLink onClick={() => ScrollTo(project)} to="/project">
-            Projects
-          </NavLink>
-          <NavLink onClick={() => ScrollTo(ski)} to="/skills">
-            Skills
-          </NavLink>
-          <NavLink onClick={() => ScrollTo(contact)} to="/contact">
-            Contact
-          </NavLink>
+          <NavLink to="/project">Projects</NavLink>
+          <NavLink to="/skills">Skills</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </StyledMenu>
-        {/* <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <StyledBurger open={open} onClick={() => setOpen(!open)}>
           <div />
           <div />
           <div />
-        </StyledBurger> */}
+        </StyledBurger>
       </Container>
-      <Home />
-      <Skills forwardeRef={ski} />
-      <Project forwardeRef={project} />
-      <Contact forwardeRef={contact} />
     </>
   );
 };
@@ -78,25 +49,19 @@ const Container = styled.nav`
   & :hover {
     color: lightgray;
   }
-  @media (max-width: 820px) {
-    width: 50%;
-  }
 `;
 
 const StyledBurger = styled.button`
-  position: absolute;
-  top: 5%;
-  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  padding: 0;
+  z-index: 10;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
   background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 10;
   @media (min-width: 821px) {
     display: none;
   }

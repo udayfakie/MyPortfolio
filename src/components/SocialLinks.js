@@ -53,7 +53,7 @@ const Gmail = styled(SiGmail)`
     color: #fff;
   }
   @media (max-width: 821px) {
-    font-size: 35px;
+    font-size: 32px;
   }
 `;
 const Git = styled(AiFillGithub)`
@@ -77,6 +77,6 @@ const LinkIn = styled(BsLinkedin)`
     color: #fff;
   }
   @media (max-width: 821px) {
-    font-size: 35px;
+    font-size: 30px;
   }
 `;

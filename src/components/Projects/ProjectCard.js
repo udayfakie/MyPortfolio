@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { TEXTS } from "../../constants";
+import { trans } from "../../styles/GlobalStyles";
 
 const ProjectCard = ({ title, description, image, link, alt }) => {
   return (
@@ -20,7 +21,8 @@ const ProjectCard = ({ title, description, image, link, alt }) => {
 export default ProjectCard;
 
 const Card = styled.div`
-  width: 350px;
+ animation: ${trans} 0.75s;
+  width: 330px;
   display: flex;
   justify-content: center;
   align-items: center;

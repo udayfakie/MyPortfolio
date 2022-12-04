@@ -1,6 +1,4 @@
-
-import { createGlobalStyle, keyframes} from "styled-components";
-
+import { createGlobalStyle, keyframes } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   html, body {
