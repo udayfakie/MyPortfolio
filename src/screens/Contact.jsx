@@ -87,7 +87,8 @@ const Input = styled.input`
   line-height: 46px;
   margin: 10px 0px;
   outline: none;
-  color: #fff;
+  color: #000;
+  font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.1px;
   background-color: #fff;
