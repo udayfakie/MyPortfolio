@@ -3,23 +3,26 @@ import styled from "styled-components";
 import { SKILLS } from "../../constants";
 import { widthFildAnimation } from "../../styles/GlobalStyles";
 
+const sortByPercentage = (array) =>
+  array.sort((a, b) => b.percentage - a.percentage);
+
 const Progress = () => {
+  const updatedSkills = sortByPercentage(SKILLS);
   return (
     <>
-      {SKILLS.sort((a, b) => b.percentage - a.percentage).map(
-        (skill, index) => {
-          const { name, icon, percentage } = skill;
-          return (
-            <Container key={index}>
-              <Text>{name}</Text>
-              <Img src={icon} alt="skill" />
-              <ProgressContainer>
-                <Bar progress={percentage}>{percentage}%</Bar>
-              </ProgressContainer>
-            </Container>
-          );
-        }
-      )}
+      {updatedSkills.map((skill, index) => {
+        const { name, icon, percentage } = skill;
+
+        return (
+          <Container key={index}>
+            <Text>{name}</Text>
+            <Img src={icon} alt="skill" />
+            <ProgressContainer>
+              <Bar progress={percentage}>{percentage}%</Bar>
+            </ProgressContainer>
+          </Container>
+        );
+      })}
     </>
   );
 };
@@ -31,6 +34,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 50%;
+  margin: 4px;
   height: 45px;
   @media (max-width: 430px) {
     width: 80%;
