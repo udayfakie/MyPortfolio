@@ -7,7 +7,11 @@ const ProjectCard = ({ title, description, image, link, alt }) => {
   return (
     <Card>
       <Title>{title}</Title>
-      <Description>{description}</Description>
+      <DescriptionContainer>
+        {description?.split("\n")?.map((description) => (
+          <Description>{description}</Description>
+        ))}
+      </DescriptionContainer>
       <Img src={image} alt={alt} />
       <ViewProject>
         <Link target="_blank" href={link}>
@@ -21,7 +25,7 @@ const ProjectCard = ({ title, description, image, link, alt }) => {
 export default ProjectCard;
 
 const Card = styled.div`
- animation: ${trans} 0.75s;
+  animation: ${trans} 0.75s;
   width: 330px;
   display: flex;
   justify-content: center;
@@ -50,10 +54,15 @@ const Title = styled.h3`
     color: #fff;
   }
 `;
-
+const DescriptionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+`;
 const Description = styled.span`
   width: 250px;
-  margin: 15px;
+  margin: 2px;
   letter-spacing: 0.1em;
   font-size: 13px;
   font-family: "poppins", sans-serif;

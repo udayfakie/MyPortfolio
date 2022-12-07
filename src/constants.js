@@ -60,8 +60,8 @@ const PROJECTS = "Projects";
 const HEY = "Hey There !";
 const LOOK = "Take A Look";
 const ABOUT_ME = `My name is ${UDAY}, and I'm a Full-Stack web developer an expert in building responsive and creative websites for small to medium businesses.`;
-const DJ = "Responsive Dj Website built with React.js";
-const PLANET_TEXT = "A beautiful Design using only HTML & CSS ";
+const DJ = "Responsive Dj Website \n Built with React.js";
+const PLANET_TEXT = "A beautiful Design \n Using only HTML & CSS ";
 
 export const LABELS = {
   UDAY,

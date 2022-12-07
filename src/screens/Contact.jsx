@@ -4,8 +4,8 @@ import emailjs from "@emailjs/browser";
 import { trans } from "../styles/GlobalStyles";
 import { LABELS } from "../constants";
 
-const Contact = ({ forwardeRef }) => {
-  const SendEmails = (e) => {
+const Contact = () => {
+  const SendEmail = (e) => {
     e.preventDefault();
     emailjs.sendForm(
       "service_yjx2tqc",
@@ -18,11 +18,11 @@ const Contact = ({ forwardeRef }) => {
   };
 
   return (
-    <Container ref={forwardeRef}>
-      <Title>{LABELS["CONTACT"]}</Title>
-      <Form onSubmit={SendEmails}>
-        <Input type="text" placeholder="Name" name="name" required />
-        <Input type="email" placeholder="Email" name="email" required />
+    <Container>
+      <Title>{LABELS.CONTACT}</Title>
+      <Form onSubmit={SendEmail}>
+        <Input type="text" placeholder="Your Name" name="name" required />
+        <Input type="email" placeholder="@" name="email" required />
         <TextArea
           name="message"
           rows="7"
