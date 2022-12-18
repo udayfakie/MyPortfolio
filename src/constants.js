@@ -47,7 +47,8 @@ const DARGHAM = "https://dj-dargham.netlify.app/";
 const LINKEDIN = "https://www.linkedin.com/in/uday-fakie/";
 const GITHUB = "https://github.com/udayfakie";
 const GMAIL = "mailto:uday.tnd3@gmail.com";
-const PLANET = "https://genuine-narwhal-bc3817.netlify.app/";
+const PLANET = "https://magical-plants.netlify.app/";
+const LOCAL_STORAGE = "https://local-storage-save.netlify.app/";
 
 const UDAY = "Uday Fakie";
 const MAGICAL_PLANET = "Magical Planet";
@@ -56,12 +57,15 @@ const CV = "My CV";
 const TECH = "Technologies";
 const CONTACT = "Contact Me";
 const PROJECTS = "Projects";
+const TODO = "TODO"
+
 
 const HEY = "Hey There !";
 const LOOK = "Take A Look";
 const ABOUT_ME = `My name is ${UDAY}, and I'm a Full-Stack web developer an expert in building responsive and creative websites for small to medium businesses.`;
 const DJ = "Responsive Dj Website \n Built with React.js";
 const PLANET_TEXT = "A beautiful Design \n Using only HTML & CSS ";
+const STUDENT = "Add a student roll and save it \n in the localStorage using only  \n HTML CSS & JAVASCRIPT";
 
 export const LABELS = {
   UDAY,
@@ -71,14 +75,17 @@ export const LABELS = {
   TECH,
   CONTACT,
   PROJECTS,
+  TODO
+  
 };
-export const TEXTS = { HEY, ABOUT_ME, DJ, PLANET_TEXT, LOOK };
+export const TEXTS = { HEY, ABOUT_ME, DJ, PLANET_TEXT, LOOK, STUDENT };
 export const LINKS = {
   DARGHAM,
   LINKEDIN,
   GITHUB,
   GMAIL,
   PLANET,
+  LOCAL_STORAGE
 };
 
 export const LABELS_ARRAY = [
