@@ -5,11 +5,11 @@ import { trans } from "../../styles/GlobalStyles";
 
 const ProjectCard = ({ title, description, image, link, alt }) => {
   return (
-    <Card>
+    <Card >
       <Title>{title}</Title>
       <DescriptionContainer>
-        {description?.split("\n")?.map((description) => (
-          <Description>{description}</Description>
+        {description?.split("\n")?.map((description ,i) => (
+          <Description key={i}>{description}</Description>
         ))}
       </DescriptionContainer>
       <Img src={image} alt={alt} />

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import MJICALPLANET from "../assets/majical-planet-img.png";
+import STUDENT_ROLL from "../assets/roll.png"
 import DJ_SCREEN_SHOT from "../assets/dj_screen_shot_fit.png";
 import { trans } from "../styles/GlobalStyles";
 import { LINKS, LABELS, TEXTS } from "../constants";
@@ -24,6 +25,13 @@ const Project = ({ forwardeRef }) => {
           image={MJICALPLANET}
           link={LINKS.PLANET}
           alt="PLANET"
+        />
+        <ProjectCard
+          title={LABELS.TODO}
+          description={TEXTS.STUDENT}
+          image={STUDENT_ROLL}
+          link={LINKS.LOCAL_STORAGE}
+          alt="localstorge"
         />
       </ProjectsContainer>
     </Container>
