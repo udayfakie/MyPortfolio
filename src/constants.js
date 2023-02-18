@@ -41,6 +41,12 @@ export const SKILLS = [
     name: "JS",
     percentage: 90,
   },
+  {
+    id: 8,
+    icon: "https://cdn-icons-png.flaticon.com/512/270/270832.png",
+    name: "WORDPRESS",
+    percentage: 93,
+  },
 ];
 
 const DARGHAM = "https://dj-dargham.netlify.app/";
