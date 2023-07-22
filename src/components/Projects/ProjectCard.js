@@ -12,12 +12,12 @@ const ProjectCard = ({ title, description, image, link, alt }) => {
           <Description key={i}>{description}</Description>
         ))}
       </DescriptionContainer>
-      <Img src={image} alt={alt} />
-      <ViewProject>
         <Link target="_blank" href={link}>
-          {TEXTS.LOOK}
-        </Link>
+      <ViewProject>
+      <Img src={image} alt={alt} />
+         
       </ViewProject>
+        </Link>
     </Card>
   );
 };
@@ -40,9 +40,9 @@ const Card = styled.div`
   }
 `;
 const ViewProject = styled.div`
-  font-weight: bold;
+  /* font-weight: bold;
   padding: 30px;
-  cursor: pointer;
+  cursor: pointer; */
 `;
 const Title = styled.h3`
   color: gray;
@@ -77,14 +77,9 @@ const Img = styled.img`
 
 const Link = styled.a`
   text-decoration: none;
-  font-weight: bold;
-  background-color: orange;
   cursor: pointer;
-
-  color: #000;
-  padding: 10px 20px;
   border-radius: 10px;
   &:hover {
-    background-color: gray;
-  }
+
+    box-shadow: 1px 2px teal, -0.1em 0 .8em blue;  }
 `;

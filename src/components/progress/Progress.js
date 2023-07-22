@@ -11,11 +11,10 @@ const Progress = () => {
   return (
     <>
       {updatedSkills.map((skill, index) => {
-        const { name, icon, percentage } = skill;
+        const { icon, percentage } = skill;
 
         return (
           <Container key={index}>
-            <Text>{name}</Text>
             <Img src={icon} alt="skill" />
             <ProgressContainer>
               <Bar progress={percentage}>{percentage}%</Bar>
