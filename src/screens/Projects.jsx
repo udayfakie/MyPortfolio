@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import MJICALPLANET from "../assets/majical-planet-img.png";
 import STUDENT_ROLL from "../assets/roll.png"
+import TaskifyImg from "../assets/taskify.png"
 import DJ_SCREEN_SHOT from "../assets/dj_screen_shot_fit.png";
 import { trans } from "../styles/GlobalStyles";
 import { LINKS, LABELS, TEXTS } from "../constants";
@@ -10,7 +11,7 @@ import ProjectCard from "../components/Projects/ProjectCard";
 const Project = ({ forwardeRef }) => {
   return (
     <Container ref={forwardeRef}>
-      <MainTitle>{LABELS.PROJECTS}</MainTitle>
+
       <ProjectsContainer>
         <ProjectCard
           title={LABELS.DJ_DARGHAM}
@@ -31,6 +32,13 @@ const Project = ({ forwardeRef }) => {
           description={TEXTS.STUDENT}
           image={STUDENT_ROLL}
           link={LINKS.LOCAL_STORAGE}
+          alt="localstorge"
+        />
+        <ProjectCard
+          title={LABELS.TASKIFY}
+          description={TEXTS.TASKIFY_TEXT}
+          image={TaskifyImg}
+          link={LINKS.TASKIFY_LINK}
           alt="localstorge"
         />
       </ProjectsContainer>
@@ -56,7 +64,7 @@ const Container = styled.div`
 `;
 
 const ProjectsContainer = styled.span`
-  width: 100%;
+  width: 80%;
   flex-wrap: wrap;
   height: auto;
   display: flex;
@@ -65,10 +73,3 @@ const ProjectsContainer = styled.span`
   transition: all 0.8s ease-in-out;
 `;
 
-const MainTitle = styled.h1`
-  font-family: "poppinse", sans-serif;
-  color: gray;
-  &:hover {
-    color: white;
-  }
-`;
