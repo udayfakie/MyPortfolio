@@ -62,7 +62,7 @@ const GITHUB = "https://github.com/udayfakie";
 const GMAIL = "mailto:uday.tnd3@gmail.com";
 const PLANET = "https://magical-plants.netlify.app/";
 const LOCAL_STORAGE = "https://local-storage-save.netlify.app/";
-const TASKIFY_LINK = 'https://taskif.netlify.app/'
+const TASKIFY_LINK = 'https://main--taskif.netlify.app/'
 
 const UDAY = "Uday Fakie";
 const MAGICAL_PLANET = "Magical Planet";
