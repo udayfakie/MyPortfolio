@@ -12,7 +12,7 @@ const Home = () => {
         <Title>{TEXTS.HEY}</Title>
         <AboutMe>{TEXTS.ABOUT_ME}</AboutMe>
         <ButtonsContainer>
-          <Resume href="CV - Uday Fakie (6).pdf" download="CV - Uday Fakie (6).pdf">
+          <Resume href="">
             <DownloadImg />
             <CvLabel>{LABELS.CV}</CvLabel>
           </Resume>
