@@ -11,12 +11,12 @@ const Home = () => {
       <Container>
         <Title>{TEXTS.HEY}</Title>
         <AboutMe>{TEXTS.ABOUT_ME}</AboutMe>
-        <ButtonsContainer>
+        {/* <ButtonsContainer>
           <Resume href="">
             <DownloadImg />
             <CvLabel>{LABELS.CV}</CvLabel>
           </Resume>
-        </ButtonsContainer>
+        </ButtonsContainer> */}
         <SocialLinks />
       </Container>
     </>

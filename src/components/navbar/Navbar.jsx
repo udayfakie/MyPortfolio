@@ -17,14 +17,14 @@ const Navbar = () => {
           <NavbarLinks end to="/">
             Home
           </NavbarLinks>
-          <NavbarLinks to="/skills">Skills</NavbarLinks>
-          <NavbarLinks to="/project">Projects</NavbarLinks>
+          {/* <NavbarLinks to="/skills">Skills</NavbarLinks> */}
+          {/* <NavbarLinks to="/project">Projects</NavbarLinks> */}
           <NavbarLinks to="/contact">Contact</NavbarLinks>
         </Menu>
         <StyledMenu open={open} onClick={() => setOpen(!open)}>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/project">Projects</NavLink>
-          <NavLink to="/skills">Skills</NavLink>
+          {/* <NavLink to="/project">Projects</NavLink> */}
+          {/* <NavLink to="/skills">Skills</NavLink> */}
           <NavLink to="/contact">Contact</NavLink>
         </StyledMenu>
         <StyledBurger open={open} onClick={() => setOpen(!open)}>
